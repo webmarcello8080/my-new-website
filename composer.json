@@ -38,7 +38,8 @@
     "roots/bedrock-autoloader": "^1.0",
     "roots/wordpress": "5.6",
     "roots/wp-config": "1.0.0",
-    "roots/wp-password-bcrypt": "1.0.0"
+    "roots/wp-password-bcrypt": "1.0.0",
+    "wpackagist-plugin/crayon-syntax-highlighter": "^2.8"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",
@@ -60,7 +61,23 @@
   },
   "scripts": {
     "post-root-package-install": [
-      "php -r \"copy('.env.example', '.env');\""
+      "php -r \"copy('.env.example', '.env');\"",
+      "composer run remove-old-wp-themes"
+    ],
+    "post-update-cmd": [
+    "composer run remove-old-wp-themes"
+    ],
+    "remove-old-wp-themes": [
+      "rm -rf web/wp/wp-content/themes/twentyten",
+      "rm -rf web/wp/wp-content/themes/twentyeleven",
+      "rm -rf web/wp/wp-content/themes/twentytwelve",
+      "rm -rf web/wp/wp-content/themes/twentythirteen",
+      "rm -rf web/wp/wp-content/themes/twentyfourteen",
+      "rm -rf web/wp/wp-content/themes/twentyfifteen",
+      "rm -rf web/wp/wp-content/themes/twentysixteen",
+      "rm -rf web/wp/wp-content/themes/twentyseventeen",
+      "rm -rf web/wp/wp-content/themes/twentynineteen",
+      "rm -rf web/wp/wp-content/themes/twentytwenty"
     ],
     "test": [
       "phpcs"
