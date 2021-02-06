@@ -1,7 +1,6 @@
 # Application
 web/app/plugins/*
 !web/app/plugins/.gitkeep
-!web/app/plugins/crayon-syntax-highlighter
 web/app/mu-plugins/*/
 web/app/upgrade
 web/app/uploads/*
@@ -20,7 +19,15 @@ web/.htaccess
 !.env.example
 
 # Composer
+vendor/*
 /vendor
 
 # WP-CLI
 wp-cli.local.yml
+
+# Marcello Stuff
+!web/app/plugins/crayon-syntax-highlighter
+
+node_modules/
+
+debug.log
