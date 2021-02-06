@@ -1,7 +1,4 @@
-//src/scss/bundle.scss
-@import './components/slider.scss';
-$colour: rgba(72, 255, 0, 0.178);
+@import './theme/theme_variables.scss';
+@import './theme/theme_typography.scss';
 
-body {
-  background-color: $colour;
-}
+@import './components/slider.scss';
