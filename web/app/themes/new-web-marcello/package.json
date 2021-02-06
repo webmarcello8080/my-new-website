@@ -9,6 +9,16 @@
   "author": "Marcello Perri",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/register": "^7.12.13",
+    "autoprefixer": "^10.2.4",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "yargs": "^16.2.0"
   }
 }
