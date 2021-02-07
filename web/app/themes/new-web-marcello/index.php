@@ -28,4 +28,5 @@
         endif;
         ?>
 
+        <?php wp_footer(); ?>
 </body>
