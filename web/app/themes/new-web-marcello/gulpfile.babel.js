@@ -96,7 +96,6 @@ export const watchForChanges = () => {
   watch('src/js/**/*.js', series(scripts, reload));
   watch("**/*.php", reload);
 }
-
 // shortcodes
 export const dev = series(clean, parallel(styles, images, copy, scripts), serve, watchForChanges);
 export const build = series(clean, parallel(styles, images, copy, scripts));
