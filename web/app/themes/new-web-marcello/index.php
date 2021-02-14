@@ -15,7 +15,7 @@
 <body>
 
       <header>
-         <h1 class="collapse"><?php bloginfo('name'); ?></h1>
+         <h1><?php bloginfo('name'); ?></h1>
          <h3><?php bloginfo('description'); ?></h3>
       </header>
 

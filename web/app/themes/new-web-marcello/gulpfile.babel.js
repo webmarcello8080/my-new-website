@@ -16,7 +16,7 @@ const PRODUCTION = yargs.argv.prod;
 // comporess and minify and compile SCSS
 // for multiple SCSS files return src(['src/scss/bundle.scss', 'src/scss/admin.scss'])
 export const styles = () => {
-  return src(['src/scss/bundle.scss'])
+  return src(['src/scss/styles.scss'])
     .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
@@ -47,7 +47,7 @@ export const clean = () => {
 // compile and minify JS
 // for multiple JS files return src(['src/js/bundle.js','src/js/admin.js'])
 export const scripts = () => {
-  return src(['src/js/bundle.js'])
+  return src(['src/js/scripts.js'])
     .pipe(named())
     .pipe(webpack({
       module: {
