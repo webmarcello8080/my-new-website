@@ -1,13 +1,13 @@
 <?php
 
-foreach (glob("classes/*.php") as $filename)
+// import classes
+foreach (glob( get_template_directory() . "/classes/*.php") as $filename)
 {
-  echo $filename;
   include_once $filename;
 }
 
-// use NewWebMarcello;
-// new CustomTheme;
+new \NewWebMarcello\CustomTheme();
+new \NewWebMarcello\Header();
 
 function new_web_marcello_assets() {
   wp_enqueue_style( 'new_web_marcello-stylesheet', get_template_directory_uri() . '/dist/css/styles.css', array(), '1.0.0', 'all' );
