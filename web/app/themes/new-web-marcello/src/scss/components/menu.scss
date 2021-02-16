@@ -1,0 +1,19 @@
+#full-screen{
+   transition: all .25s ease-out;
+   position: fixed;
+   z-index: 2;
+   top: 0;
+   background: linear-gradient(to bottom right, Tomato, Wheat);
+   left: -100%;
+   opacity: .5;
+}
+.menu-header-menu-container{
+   .menu{
+      .menu-item{
+         .sub-menu{
+            display: none;
+            transition: all 0.5s ease;
+         }
+      }
+   }
+}
