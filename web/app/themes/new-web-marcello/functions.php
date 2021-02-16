@@ -7,4 +7,4 @@ foreach (glob( get_template_directory() . "/classes/*.php") as $filename)
 }
 
 new \NewWebMarcello\CustomTheme();
-new \NewWebMarcello\Header();
+new \NewWebMarcello\Head();

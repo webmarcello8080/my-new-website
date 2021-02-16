@@ -90,11 +90,15 @@ export const reload = done => {
 
 // watch functions
 export const watchForChanges = () => {
+  // watch('src/scss/**/*.scss', styles);
+  // watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, reload));
+  // watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(copy, reload));
+  // watch('src/js/**/*.js', series(scripts, reload));
+  // watch("**/*.php", reload);
   watch('src/scss/**/*.scss', styles);
-  watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', series(images, reload));
-  watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], series(copy, reload));
-  watch('src/js/**/*.js', series(scripts, reload));
-  watch("**/*.php", reload);
+  watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', images);
+  watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], copy);
+  watch('src/js/**/*.js', scripts);
 }
 // shortcodes
 export const dev = series(clean, parallel(styles, images, copy, scripts), serve, watchForChanges);
