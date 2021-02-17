@@ -17,11 +17,10 @@
     <?php wp_head(); ?>
 </head>
 <body>
-
     <?php get_header() ?>
-    <div class="main">
+    <div id="main">
         content goes here
     </div>
 
-    <?php wp_footer(); ?>
+    <?php get_footer() ?>
 </body>

@@ -9,3 +9,4 @@ foreach (glob( get_template_directory() . "/classes/*.php") as $filename)
 new \NewWebMarcello\CustomTheme();
 new \NewWebMarcello\Head();
 new \NewWebMarcello\Menu();
+new \NewWebMarcello\Footer();
