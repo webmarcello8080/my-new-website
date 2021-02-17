@@ -1,6 +1,4 @@
 <footer if="footer">
-footer is here
-
-   <?php dynamic_sidebar( 'footer_area_one' ); ?>
+   <?php get_template_part( 'template-parts/content', 'footer' ); ?>
 </footer>
 <?php wp_footer(); ?>

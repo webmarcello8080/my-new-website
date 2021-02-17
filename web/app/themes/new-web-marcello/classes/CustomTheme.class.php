@@ -19,5 +19,4 @@ class CustomTheme{
 
       add_theme_support( 'custom-logo', $args );
    }
-
 }

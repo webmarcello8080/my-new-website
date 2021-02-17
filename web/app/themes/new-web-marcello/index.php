@@ -21,6 +21,5 @@
     <div id="main">
         content goes here
     </div>
-
     <?php get_footer() ?>
 </body>
