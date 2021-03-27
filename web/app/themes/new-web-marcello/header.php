@@ -2,7 +2,7 @@
    <?php $buttons = new \NewWebMarcello\Buttons(); ?>
 
    <header>
-      <div class="container">
+      <div class="container-xl">
          <div class="row">
             <div class="col-2 text-left align-self-center burger-menu">
                <div id="menu-toggle">

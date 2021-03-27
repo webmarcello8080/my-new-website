@@ -19,7 +19,7 @@
 <body>
     <?php get_header() ?>
     
-        <h1>content goes here</h1>
+        <h1>CONTENT GOES HERE</h1>
         <h2>content goes here</h2>
         <h3>content goes here</h3>
         <h4>content goes here</h4>
