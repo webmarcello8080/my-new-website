@@ -1,3 +1,30 @@
 body {
-  background-color: $colour;
+  background-color: $backgroud-colour;
+}
+h1, h2, h3, h4, h5, h6{
+  font-style: normal;
+  font-weight: bold;
+  color: $primary-colour;
+}
+h1{
+  font-size: $body-size * 2.5;
+}
+h2{
+  font-size: $body-size * 2;
+}
+h3{
+  font-size: $body-size * 1.75;
+}
+h4{
+  font-size: $body-size * 1.5;
+}
+h5{
+  font-size: $body-size * 1.25;
+}
+h6{
+  font-size: $body-size;
+}
+p{
+  font-size: $body-size;
+  color: $body-colour;
 }

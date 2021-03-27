@@ -18,8 +18,14 @@
 </head>
 <body>
     <?php get_header() ?>
-    <div id="main">
-        content goes here
-    </div>
+    
+        <h1>content goes here</h1>
+        <h2>content goes here</h2>
+        <h3>content goes here</h3>
+        <h4>content goes here</h4>
+        <h5>content goes here</h5>
+        <h6>content goes here</h6>
+        <p>content goes here</p>
+        
     <?php get_footer() ?>
 </body>

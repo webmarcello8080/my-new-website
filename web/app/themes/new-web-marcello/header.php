@@ -30,3 +30,5 @@
       </div>
       <?php get_template_part( 'template-parts/content', 'menu' ); ?>
    </header>
+
+   <main id="main"><!-- main content -->
