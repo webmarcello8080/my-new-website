@@ -19,7 +19,7 @@
             </div>
 
             <div class="col-8 text-center align-self-center logo-wrapper">
-               <?php $header->get_logo('','img-fluid') ?>
+               <?php $header->get_logo('','img-fluid logo-img') ?>
             </div>
 
             <div class="col-2 text-right align-self-center login-wrapper">

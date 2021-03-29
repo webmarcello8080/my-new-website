@@ -20,7 +20,6 @@
       height:4px;
       position:relative;
       top:24px;
-      left:20px;
       margin:8px 0;
       &:nth-child(1){
          width:50px;
@@ -47,16 +46,16 @@
             height:0%;
             width:4px;
             position:absolute;
-            top: 24%;
-            left: 40px;
+            top: 35%;
+            left: 31px;
             transition-delay:0s;
          }
          &:nth-child(2){
             width:0%;
             height:4px;
             position:absolute;
-            left:15%;
-            top:50px;
+            left:7%;
+            top:60px;
             transition-delay:.25s;
          }
       }

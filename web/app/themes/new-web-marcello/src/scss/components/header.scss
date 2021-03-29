@@ -1,3 +1,11 @@
-.burger-menu{
-   z-index: 10;
+header{
+   .row{
+      .burger-menu{
+         z-index: 10;
+      }
+
+      .logo-img {
+         max-height: 50px;
+      }
+   }
 }
