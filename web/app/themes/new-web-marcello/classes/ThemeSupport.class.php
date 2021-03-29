@@ -2,7 +2,7 @@
 
 namespace NewWebMarcello;
 
-class CustomTheme{
+class ThemeSupport{
    
    public function __construct(){
       add_action( 'after_setup_theme', array($this, 'custom_logo') );
