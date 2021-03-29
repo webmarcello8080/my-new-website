@@ -1,8 +1,10 @@
    </main><!-- main content -->
    
-   <footer if="footer">
-      <?php get_template_part( 'template-parts/footer/content', 'footer' ); ?>
+   <footer id="footer">
+      <?php get_template_part( 'template-parts/footer/site-footer' ); ?>
    </footer>
+
+   <?php dynamic_sidebar( 'copyright_area' ); ?>
    
 </div><!-- page -->
 
