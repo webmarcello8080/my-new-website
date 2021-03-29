@@ -1,6 +1,6 @@
 <?php $header = new \NewWebMarcello\Header(); ?>
 <?php $buttons = new \NewWebMarcello\Buttons(); ?>
-<header>
+<header class="site-header">
    <div class="container-xl">
       <div class="row">
          <div class="col-2 text-left align-self-center burger-menu">
@@ -27,5 +27,5 @@
 
       </div>
    </div>
-   <?php get_template_part( 'template-parts/header/content', 'menu' ); ?>
+   <?php get_template_part( 'template-parts/header/content-menu' ); ?>
 </header>
