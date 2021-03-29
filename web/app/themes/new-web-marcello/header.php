@@ -1,34 +1,21 @@
-   <?php $header = new \NewWebMarcello\Header(); ?>
-   <?php $buttons = new \NewWebMarcello\Buttons(); ?>
+<!DOCTYPE html>
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" <?php language_attributes(); ?>> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" <?php language_attributes(); ?>> <![endif]-->
+<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?>> <!--<![endif]-->
+<head>
+        <!--=== META TAGS ===-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="<?php bloginfo( 'charset' ); ?>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-   <header>
-      <div class="container-xl">
-         <div class="row">
-            <div class="col-2 text-left align-self-center burger-menu">
-               <div id="menu-toggle">
-                  <div id="hamburger">
-                     <span></span>
-                     <span></span>
-                     <span></span>
-                  </div>
-                  <div id="cross">
-                     <span></span>
-                     <span></span>
-                  </div>
-               </div>
-            </div>
+    <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>" />
+    <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-            <div class="col-8 text-center align-self-center logo-wrapper">
-               <?php $header->get_logo('','img-fluid logo-img') ?>
-            </div>
-
-            <div class="col-2 text-right align-self-center login-wrapper">
-               <?php $buttons->get_login('Login', '_blank') ?>
-            </div>
-
-         </div>
-      </div>
-      <?php get_template_part( 'template-parts/content', 'menu' ); ?>
-   </header>
-
+    <title><?php bloginfo('name'); ?></title>
+    <?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
+   <?php get_template_part( 'template-parts/header/site-header' ); ?>
    <main id="main"><!-- main content -->
