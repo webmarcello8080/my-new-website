@@ -7,6 +7,13 @@ foreach (glob( get_template_directory() . "/classes/*.php") as $filename)
 }
 
 new \NewWebMarcello\CustomTheme();
-new \NewWebMarcello\Head();
+$args = [
+    "metatag" => true,
+    "link" => true,
+    "title" => true,
+    "remove_emoji" => true,
+    "remove_wp_generator" => true,
+];
+new \NewWebMarcello\Head($args);
 new \NewWebMarcello\Menu();
 new \NewWebMarcello\Footer();
