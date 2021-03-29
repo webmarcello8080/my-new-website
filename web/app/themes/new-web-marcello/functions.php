@@ -10,7 +10,6 @@ new \NewWebMarcello\CustomTheme();
 $args = [
     "metatag" => true,
     "link" => true,
-    "title" => true,
     "remove_emoji" => true,
     "remove_wp_generator" => true,
 ];

@@ -26,14 +26,9 @@ class Head{
          add_action( 'wp_head', array( $this, 'load_metatag'));
       }
 
-      // include alternate/pingback link on head
+      // include pingback link on head
       if(isset($args['link']) && $args['link']){
          add_action( 'wp_head', array( $this, 'load_link'));
-      }
-
-      // include title on head
-      if(isset($args['title']) && $args['title']){
-         add_action( 'wp_head', array( $this, 'load_title'));
       }
    }
 
@@ -53,14 +48,7 @@ class Head{
 
    public function load_link(){
       ?>
-      <link rel="alternate" type="application/rss+xml" title="<?php bloginfo('name'); ?> RSS2 Feed" href="<?php bloginfo('rss2_url'); ?>" />
       <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
-      <?php
-   }
-
-   public function load_title(){
-      ?>
-      <title><?php bloginfo('name'); ?></title>
       <?php
    }
 }
