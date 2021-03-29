@@ -8,5 +8,6 @@
    <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
+<div id="page" class="site">
    <?php get_template_part( 'template-parts/header/site-header' ); ?>
-   <main id="main"><!-- main content -->
+   <main id="main">
