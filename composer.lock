@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b438dcafff04698a99bde5bef69a066b",
+    "content-hash": "38358d86b7103010aa5ed69127af6e7d",
     "packages": [
         {
             "name": "composer/installers",
@@ -991,6 +991,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/crayon-syntax-highlighter/"
+        },
+        {
+            "name": "wpackagist-plugin/genesis-custom-blocks",
+            "version": "1.1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/genesis-custom-blocks/",
+                "reference": "tags/1.1.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/genesis-custom-blocks.1.1.0.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/genesis-custom-blocks/"
         }
     ],
     "packages-dev": [

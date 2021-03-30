@@ -1,0 +1,24 @@
+.hero-block{
+   position: relative;
+
+   .hero-background-image {
+      position: absolute;
+      top: 0;
+      right: 0px;
+   }
+   
+   .mouse-icon {
+      position: absolute;
+      bottom: 24px;
+      left: 50%;
+      svg{
+         rect{
+            stroke: $primary;
+         }
+         ellipse{
+            fill:$primary;
+         }
+      }
+
+   }
+}
