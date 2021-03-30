@@ -15,4 +15,3 @@ $hero_background = file_get_contents( get_template_directory() . "/dist/images/h
   <div class="mouse-icon"><?= $mouse_icon ?></div>
   <div class="hero-background-image"><?= $hero_background ?></div>
 </section>
-<?php 
