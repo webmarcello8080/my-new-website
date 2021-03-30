@@ -1,12 +1,20 @@
 .hero-block{
-   position: relative;
 
    .hero-background-image {
       position: absolute;
       top: 0;
       right: 0px;
+      z-index: -1;
+
+      // svg{
+      //    stop{
+      //       &:nth-child(2){
+      //          stop-color:$primary;
+      //       }
+      //    }
+      // }
    }
-   
+
    .mouse-icon {
       position: absolute;
       bottom: 24px;

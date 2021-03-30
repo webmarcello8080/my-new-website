@@ -2,6 +2,13 @@ h1, h2, h3, h4, h5, h6{
   font-style: normal;
   font-weight: bold;
   color: $primary;
+  margin-bottom: $spacer;
+}
+h1{
+  font-size: 3 * $font-size-base;
+}
+p{
+  margin-bottom: $spacer;
 }
 $container-max-widths: (
   xl: $container
