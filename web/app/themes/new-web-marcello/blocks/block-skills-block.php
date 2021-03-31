@@ -19,7 +19,7 @@ $git_logo = file_get_contents( get_template_directory() . "/dist/images/logos/gi
          <h6><?php block_field('top-title'); ?></h6>
          <h2><?php block_field('block-title'); ?></h2>
          <p><?php block_field('block-body'); ?></p>
-         <p><a href="<?php block_field('button-url'); ?>" class="btn btn-primary btn-large">Explore more</a></p>
+         <p><a href="<?php block_field('button-url'); ?>" class="btn btn-primary">Explore more</a></p>
       </div>
       <div class="col-lg-8 skills-img-wrapper" style="background-image:url(<?= $world_map_background ?>)">
         <div class="php-logo"><?= $php_logo ?></div>

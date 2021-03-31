@@ -1,3 +1,4 @@
+<?php $categories = new \NewWebMarcello\Categories; ?>
 <div class="col-md-4">
    <div class="card border-0 mb-3 text-left single-blog">
       <div class="card-img-top blog-img">
@@ -10,9 +11,10 @@
          </div>
          <h6 class="card-title blog-title mb-1"><a href="<?php the_permalink() ?>" ><?php the_title(); ?></a></h6>
       </div>
-      <div class="card-body pt-0 blog-body">
-         <p class="card-text blog-text mt-3"><?php the_excerpt() ?></p>
-         <h6 class="blog-read-more"><a href="<?php the_permalink() ?>" >Read More</a></h6>
+      <div class="card-body pt-2 blog-body">
+         <div class="blog-categories"><?php $categories->getCategoryList(get_the_ID(), 'badge badge-primary', ' ') ?></div>
+         <p class="card-text blog-text mt-3"><?= get_the_excerpt() ?></p>
+         <h6 class="blog-read-more"><a href="<?php the_permalink() ?>" >Read More ...</a></h6>
       </div>
    </div>
 </div>

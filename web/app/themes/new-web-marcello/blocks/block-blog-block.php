@@ -15,9 +15,8 @@ $smallest_square_background = file_get_contents( get_template_directory() . "/di
                <?php get_template_part( 'template-parts/loop/blog' ); ?>
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
-
          <?php else : ?>
-            <p><?php __('No News', 'new_web_marcello'); ?></p>
+            <p><?php __('No Posts', 'new_web_marcello'); ?></p>
          <?php endif; ?>
       </div>
    </div>
