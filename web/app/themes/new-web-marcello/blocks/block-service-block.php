@@ -1,4 +1,8 @@
 <?php
+// background images
+$big_square_background = file_get_contents( get_template_directory() . "/dist/images/big-square-background.svg");
+$small_square_background = file_get_contents( get_template_directory() . "/dist/images/small-square-background.svg");
+// icon images
 $small_horizontal_line = file_get_contents( get_template_directory() . "/dist/images/small-horizontal-line.svg");
 $website_service_icon = file_get_contents( get_template_directory() . "/dist/images/website-service-icon.svg");
 $plugin_service_icon = file_get_contents( get_template_directory() . "/dist/images/plugin-service-icon.svg");
@@ -8,7 +12,7 @@ $application_service_icon = file_get_contents( get_template_directory() . "/dist
    <div class="container-xl">
       <h2><?php block_field('block-title'); ?></h2>
       <p><?php block_field('block-description'); ?></p>
-      <div class="row mt-4 service-wrapper">
+      <div class="row mt-5 service-wrapper">
          <div class="col-md-4 px-2 service">
             <div class="card pb-4 border-0 rounded-lg">
                <div class="card-img-top service-img">
@@ -50,4 +54,6 @@ $application_service_icon = file_get_contents( get_template_directory() . "/dist
          </div>
       </div>
    </div>
+   <div class="big-square-background img-fluid"><?= $big_square_background ?></div>
+   <div class="small-square-background"><?= $small_square_background ?></div>
 </section>

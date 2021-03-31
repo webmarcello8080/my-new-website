@@ -1,6 +1,10 @@
 .service-block{
+   position: relative;
+
    .service-wrapper{
       .service{
+         z-index: 1;
+
          .card{
             box-shadow: 0px 9px 20px rgba(187, 187, 187, 0.25);
          }
@@ -8,5 +12,16 @@
             padding-bottom: $spacer;
          }
       }
+   }
+   .big-square-background{
+      position: absolute;
+      top: -50px;
+      left: 0;
+      overflow: hidden;
+   }
+   .small-square-background{
+      position: absolute;
+      left: 0;
+      bottom: -80px;
    }
 }
