@@ -1,10 +1,17 @@
-<?php $categories = new \NewWebMarcello\Categories; ?>
+<?php 
+$categories = new \NewWebMarcello\Categories; 
+if(has_post_thumbnail()){
+   $blog_header_class =  'blog-header-aside';
+} else {
+   $blog_header_class =  'blog-header';
+}
+?>
 <div class="col-md-4">
-   <div class="card border-0 mb-3 text-left single-blog">
+   <div class="card border-0 rounded-lg my-3 text-left single-blog">
       <div class="card-img-top blog-img">
          <a href="<?php the_permalink() ?>" ><?php the_post_thumbnail( 'large', ['class' => 'img-fluid'] ); ?></a>
       </div>
-      <div class="card-body pb-2 blog-header">
+      <div class="card-body pb-2 <?= $blog_header_class ?>">
          <div class="d-flex justify-content-between mb-3">
             <div class="blog-author"><?= get_the_author_meta('display_name'); ?></div>
             <div class="blog-date"><?= get_the_date(); ?></div>

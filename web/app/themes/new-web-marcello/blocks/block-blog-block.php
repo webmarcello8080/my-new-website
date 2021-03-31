@@ -3,6 +3,7 @@ $query_result = new WP_Query( array(
    'category_name' => 'blog',
    'posts_per_page' => block_value('number-of-posts'),
 ));
+// get background images
 $smallest_square_background = file_get_contents( get_template_directory() . "/dist/images/smallest-square-background.svg");
 ?>
 <section class="blog-block py-5 text-center bg-light <?php block_field('className'); ?>">

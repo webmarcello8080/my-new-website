@@ -1,0 +1,33 @@
+.pagination{
+   justify-content: flex-end;
+   margin-top: $spacer * 2.5;
+   margin-bottom: $spacer * 2.5;
+
+   .screen-reader-text{
+      display: none;
+   }
+
+   .nav-links{
+      .page-numbers{
+         border: 1px solid $primary;
+         margin-left: 2px;
+         margin-right: 2px;
+         border-radius: 4px;
+         padding: 4px 10px;
+         text-decoration: none;
+
+         &.current{
+            color: $light;
+            background-color: $primary;
+         }
+
+         &.next{
+            padding-right: 3px !important;
+         }
+
+         &.prev{
+            padding-left: 3px !important;
+         }
+      }
+   }
+}
