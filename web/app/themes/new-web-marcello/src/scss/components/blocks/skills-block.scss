@@ -1,0 +1,61 @@
+.skills-block{
+   position: relative;
+
+   .skills-wrapper{
+      .skills-img-wrapper{
+         height: 500px;
+         position: relative;
+         
+         @include media-breakpoint-down(md) {
+            display: none;
+         }
+
+         .php-logo {
+            position: absolute;
+            top: 35%;
+            left: 35%;
+         }
+         .wordpress-logo {
+            position: absolute;
+            top: 20%;
+            right: 20%;
+         }
+         .jquery-logo {
+            position: absolute;
+            top: 8%;
+            left: 35%;
+         }
+         .sass-logo {
+            position: absolute;
+            bottom: 15%;
+            right: 29%;
+         }
+         .drupal-logo {
+            position: absolute;
+            bottom: 10%;
+            left: 42%;
+         }
+         .gulp-logo {
+            position: absolute;
+            top: 24%;
+            left: 18%;
+         }
+         .git-logo {
+            position: absolute;
+            left: 20%;
+            top: 50%;
+         }
+      }
+   }
+
+   .mid-square-background{
+      position: absolute;
+      top: 0;
+      right: 0;     
+   }
+   .smallest-square-background{
+      position: absolute;
+      right: 100px;
+      bottom: -100px;
+   }
+}

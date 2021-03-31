@@ -1,5 +1,5 @@
 <?php
-$mouse_icon = file_get_contents( get_template_directory() . "/dist/images/mouse-icon.svg");
+$mouse_icon = file_get_contents( get_template_directory() . "/dist/images/icons/mouse-icon.svg");
 $hero_background = file_get_contents( get_template_directory() . "/dist/images/hero-background.svg");
 ?>
 <section class="hero-block vh-100 d-flex align-items-center <?php block_field('className'); ?>">

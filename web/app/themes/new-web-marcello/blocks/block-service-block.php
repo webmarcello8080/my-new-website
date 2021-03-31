@@ -4,16 +4,16 @@ $big_square_background = file_get_contents( get_template_directory() . "/dist/im
 $small_square_background = file_get_contents( get_template_directory() . "/dist/images/small-square-background.svg");
 // icon images
 $small_horizontal_line = file_get_contents( get_template_directory() . "/dist/images/small-horizontal-line.svg");
-$website_service_icon = file_get_contents( get_template_directory() . "/dist/images/website-service-icon.svg");
-$plugin_service_icon = file_get_contents( get_template_directory() . "/dist/images/plugin-service-icon.svg");
-$application_service_icon = file_get_contents( get_template_directory() . "/dist/images/application-service-icon.svg");
+$website_service_icon = file_get_contents( get_template_directory() . "/dist/images/icons/website-service-icon.svg");
+$plugin_service_icon = file_get_contents( get_template_directory() . "/dist/images/icons/plugin-service-icon.svg");
+$application_service_icon = file_get_contents( get_template_directory() . "/dist/images/icons/application-service-icon.svg");
 ?>
 <section class="service-block py-5 text-center bg-light <?php block_field('className'); ?>">
-   <div class="container-xl">
+   <div class="container-xl service-wrapper">
       <h2><?php block_field('block-title'); ?></h2>
       <p><?php block_field('block-description'); ?></p>
-      <div class="row mt-5 service-wrapper">
-         <div class="col-md-4 px-2 service">
+      <div class="row mt-5">
+         <div class="col-md-4 service">
             <div class="card pb-4 border-0 rounded-lg">
                <div class="card-img-top service-img">
                   <?= $website_service_icon ?>
@@ -26,7 +26,7 @@ $application_service_icon = file_get_contents( get_template_directory() . "/dist
                </div>
             </div>
          </div>
-         <div class="col-md-4 px-2 service">
+         <div class="col-md-4 service">
             <div class="card pb-4 border-0 rounded-lg">
                <div class="card-img-top service-img">
                   <?= $plugin_service_icon ?>
@@ -39,7 +39,7 @@ $application_service_icon = file_get_contents( get_template_directory() . "/dist
                </div>
             </div>
          </div>
-         <div class="col-md-4 px-2 service">
+         <div class="col-md-4 service">
             <div class="card pb-4 border-0 rounded-lg">
                <div class="card-img-top service-img">
                   <?= $application_service_icon ?>
