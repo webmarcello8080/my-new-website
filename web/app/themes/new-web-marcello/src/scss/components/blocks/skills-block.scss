@@ -5,7 +5,9 @@
       .skills-img-wrapper{
          height: 500px;
          position: relative;
-         
+         background-size: contain;
+         background-repeat: no-repeat;
+
          @include media-breakpoint-down(md) {
             display: none;
          }

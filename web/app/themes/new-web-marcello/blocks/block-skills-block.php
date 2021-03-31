@@ -2,6 +2,7 @@
 // get background images
 $smallest_square_background = file_get_contents( get_template_directory() . "/dist/images/smallest-square-background.svg");
 $mid_square_background = file_get_contents( get_template_directory() . "/dist/images/mid-square-background.svg");
+$world_map_background = get_template_directory_uri() . "/dist/images/world-map-background.svg";
 // get logos
 $php_logo = file_get_contents( get_template_directory() . "/dist/images/logos/php-logo.svg");
 $wordpress_logo = file_get_contents( get_template_directory() . "/dist/images/logos/wordpress-logo.svg");
@@ -14,13 +15,14 @@ $git_logo = file_get_contents( get_template_directory() . "/dist/images/logos/gi
 <section class="skills-block <?php block_field('className'); ?>">
   <div class="container-xl py-5 skills-wrapper">
     <div class="row py-5 align-items-center">
-      <div class="col-md-4 skills-body">
+      <div class="col-lg-4 skills-body">
          <h6><?php block_field('top-title'); ?></h6>
          <h2><?php block_field('block-title'); ?></h2>
          <p><?php block_field('block-body'); ?></p>
          <p><a href="<?php block_field('button-url'); ?>" class="btn btn-primary btn-large">Explore more</a></p>
       </div>
-      <div class="col-md-8 skills-img-wrapper">
+      <div class="col-lg-8 skills-img-wrapper" style="background-image:url(<?= $world_map_background ?>)">
+        <!-- <div class="world-map-background"><?= $world_map_background ?></div> -->
         <div class="php-logo"><?= $php_logo ?></div>
         <div class="wordpress-logo"><?= $wordpress_logo ?></div>
         <div class="sass-logo"><?= $sass_logo ?></div>
