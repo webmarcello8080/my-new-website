@@ -1,0 +1,26 @@
+.blog-block{
+   position: relative;
+
+   .blog-wrapper{
+      .single-blog{
+         overflow: hidden;
+         z-index: 1;
+
+         .blog-header{
+            margin-top: -80px;
+            margin-left: 20%;
+            background: $body-bg;
+         }
+
+         .blog-body{
+            background: $body-bg;
+         }
+      }
+   }
+
+   .smallest-square-background{
+      position: absolute;
+      bottom: 0;
+      left: 50px;
+   }
+}

@@ -17,7 +17,8 @@
 
    .mouse-icon {
       position: absolute;
-      bottom: 24px;
+      animation:  MoveUpDown 3s linear infinite;
+      bottom: 0;
       left: 49%;
       svg{
          rect{
@@ -29,4 +30,14 @@
       }
 
    }
+
+   @keyframes MoveUpDown {
+      0%, 35%, 65%, 100% {
+         transform: translateY(0);
+      }
+      50% {
+         transform: translateY(-30px);
+      }
+   }
+
 }
