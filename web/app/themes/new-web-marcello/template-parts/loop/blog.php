@@ -11,7 +11,7 @@ if(has_post_thumbnail()){
       <div class="card-img-top blog-img">
          <a href="<?php the_permalink() ?>" ><?php the_post_thumbnail( 'large', ['class' => 'img-fluid'] ); ?></a>
       </div>
-      <div class="card-body pb-2 <?= $blog_header_class ?>">
+      <div class="card-body <?= $blog_header_class ?>">
          <div class="d-flex justify-content-between mb-3">
             <div class="blog-author"><?= get_the_author_meta('display_name'); ?></div>
             <div class="blog-date"><?= get_the_date(); ?></div>
