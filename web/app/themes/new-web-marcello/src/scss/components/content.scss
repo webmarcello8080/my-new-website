@@ -2,3 +2,20 @@
    min-height: 80vh;
    margin-top: -$header-height;
 }
+
+.blog-wrapper{
+   .single-blog{
+      overflow: hidden;
+      z-index: 1;
+
+      .blog-header{
+         margin-top: -80px;
+         margin-left: 20%;
+         background: $body-bg;
+      }
+
+      .blog-body{
+         background: $body-bg;
+      }
+   }
+}

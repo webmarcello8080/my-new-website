@@ -22,7 +22,6 @@ $git_logo = file_get_contents( get_template_directory() . "/dist/images/logos/gi
          <p><a href="<?php block_field('button-url'); ?>" class="btn btn-primary btn-large">Explore more</a></p>
       </div>
       <div class="col-lg-8 skills-img-wrapper" style="background-image:url(<?= $world_map_background ?>)">
-        <!-- <div class="world-map-background"><?= $world_map_background ?></div> -->
         <div class="php-logo"><?= $php_logo ?></div>
         <div class="wordpress-logo"><?= $wordpress_logo ?></div>
         <div class="sass-logo"><?= $sass_logo ?></div>

@@ -18,7 +18,7 @@
    .mouse-icon {
       position: absolute;
       animation:  MoveUpDown 3s linear infinite;
-      bottom: 0;
+      bottom: $spacer * 2;
       left: 49%;
       svg{
          rect{
