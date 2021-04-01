@@ -1,10 +1,5 @@
 <?php 
 $categories = new \NewWebMarcello\Categories; 
-// if(has_post_thumbnail()){
-//    $blog_header_class =  'blog-header-aside';
-// } else {
-//    $blog_header_class =  'blog-header';
-// }
 ?>
 <div class="col-md-4">
    <div class="card border-0 rounded-lg my-3 text-left single-blog">
@@ -16,7 +11,7 @@ $categories = new \NewWebMarcello\Categories;
          <h6 class="card-title mb-2 blog-title"><a href="<?php the_permalink() ?>" ><?php the_title(); ?></a></h6>
       </div>
       <div class="card-body pt-0 blog-body">
-         <div class="blog-categories"><?php $categories->getCategoryList(get_the_ID(), 'badge badge-primary', ' ') ?></div>
+         <div class="blog-categories"><?php $categories->getCategoryList(get_the_ID(), 'badge badge-pill badge-primary', ' ') ?></div>
          <p class="card-text blog-text mt-3"><small><?= get_the_excerpt() ?></small></p>
          <div class="d-flex justify-content-between">
             <div class="blog-date"><?= get_the_date(); ?></div>

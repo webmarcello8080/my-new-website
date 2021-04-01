@@ -2,11 +2,12 @@
 @import 'node_modules/bootstrap/scss/bootstrap';
 @import './theme/theme_typography.scss';
 
-@import './components/menu/menu-icon.scss';
-@import './components/menu/menu.scss';
 @import './components/site-header.scss';
 @import './components/content.scss';
 @import './components/pagination.scss';
+@import './components/category.scss';
+@import './components/menu/menu-icon.scss';
+@import './components/menu/menu.scss';
 @import './components/blocks/hero-block.scss';
 @import './components/blocks/service-block.scss';
 @import './components/blocks/skills-block.scss';

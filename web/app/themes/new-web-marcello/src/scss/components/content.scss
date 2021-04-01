@@ -1,15 +1,6 @@
-#main{
-   min-height: 80vh;
-   margin-top: -$header-height;
-}
-
-// category/blog section
-.single-blog{
-   overflow: hidden;
-   z-index: 1;
-   box-shadow: 0px 9px 20px rgba(187, 187, 187, 0.25);
-
-   .blog-body{
-      background: $body-bg;
+.site{
+   #main{
+      min-height: 80vh;
+      margin-top: -$header-height;
    }
 }

@@ -1,19 +1,8 @@
-<?php
-/**
- * The template for displaying archive pages
- *
- * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
- *
- * @package WordPress
- * @subpackage Twenty_Twenty_One
- * @since 1.0.0
- */
+<?php get_header(); ?>
 
-get_header();
+<?php get_template_part( 'template-parts/header/category-header' ); ?>
 
-$description = get_the_archive_description();
-?>
-<div class="container-xl categpry-wrapper">
+<div class="container-xl category-wrapper">
 	
 	<?php if ( have_posts() ) : ?>
 
