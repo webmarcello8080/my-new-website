@@ -1,0 +1,16 @@
+@keyframes MoveUpDown {
+   0%, 35%, 65%, 100% {
+      transform: translateY(0);
+   }
+   50% {
+      transform: translateY(-30px);
+   }
+}
+@keyframes Rotating {
+   from {
+      transform: rotate(0deg);
+   }
+   to {
+      transform: rotate(360deg);
+   }
+}

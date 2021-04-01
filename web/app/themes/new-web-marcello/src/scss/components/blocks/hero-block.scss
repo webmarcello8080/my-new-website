@@ -30,14 +30,4 @@
       }
 
    }
-
-   @keyframes MoveUpDown {
-      0%, 35%, 65%, 100% {
-         transform: translateY(0);
-      }
-      50% {
-         transform: translateY(-30px);
-      }
-   }
-
 }
