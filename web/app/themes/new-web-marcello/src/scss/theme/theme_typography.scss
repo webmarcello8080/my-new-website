@@ -24,7 +24,12 @@ $container-max-widths: (
 .btn{
   padding: 10px 32px;
 }
-
+.btn-sm{
+  padding: 5px 16px;
+}
+.btn-lg{
+  padding: 10px 32px;
+}
 // badges
 .badge{
   padding: 5px 10px;
