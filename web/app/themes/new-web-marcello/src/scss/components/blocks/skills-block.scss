@@ -53,12 +53,16 @@
    .mid-square-background{
       position: absolute;
       top: 0;
-      right: 0;     
+      right: 0;
+      z-index: 0;
+      pointer-events: none;
    }
    .smallest-square-background{
       position: absolute;
       right: 100px;
       bottom: -100px;
+      z-index: 0;
+      pointer-events: none;
       animation: Rotating 60s linear infinite;
    }
 }

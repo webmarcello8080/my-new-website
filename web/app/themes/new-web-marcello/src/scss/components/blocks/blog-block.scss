@@ -5,6 +5,19 @@
       position: absolute;
       bottom: 0;
       left: 50px;
+      z-index: 0;
+      pointer-events: none;
       animation: Rotating 60s linear infinite;
+   }
+   .big-square-background{
+      position: absolute;
+      top: -50px;
+      left: 0;
+      overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
+   }
+   .blog-block-footer{
+      z-index: 1;
    }
 }

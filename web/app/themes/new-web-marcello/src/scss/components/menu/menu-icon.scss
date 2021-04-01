@@ -20,17 +20,17 @@
       height:4px;
       position:relative;
       top:24px;
-      margin:8px 0;
+      margin:7px 0;
       &:nth-child(1){
-         width:50px;
+         width:45px;
          transition-delay:.5s;
       }
       &:nth-child(2){
-         width:40px;
+         width:35px;
          transition-delay:.625s;
       }
       &:nth-child(3){
-         width:30px;
+         width:25px;
          transition-delay:.75s;
       }
    }
@@ -46,8 +46,8 @@
             height:0%;
             width:4px;
             position:absolute;
-            top: 45%;
-            left: 26px;
+            top: 47%;
+            left: 23px;
             transition-delay:0s;
          }
          &:nth-child(2){
@@ -80,13 +80,13 @@
    #cross {
       span {
          &:nth-child(1){
-         height:45%;
+         height:40px;
          transition-delay:.625s;
          }
       }
       span {
          &:nth-child(2){
-            width:45%;
+            width:40px;
             transition-delay:.375s;
          }
       }    

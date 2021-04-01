@@ -4,6 +4,7 @@ $query_result = new WP_Query( array(
    'posts_per_page' => block_value('number-of-posts'),
 ));
 // get background images
+$big_square_background = file_get_contents( get_template_directory() . "/dist/images/big-square-background.svg");
 $smallest_square_background = file_get_contents( get_template_directory() . "/dist/images/smallest-square-background.svg");
 ?>
 <section class="blog-block py-5 text-center bg-light <?php block_field('className'); ?>">
@@ -24,5 +25,6 @@ $smallest_square_background = file_get_contents( get_template_directory() . "/di
    <div class="mt-4 blog-block-footer">
       <a href="<?php block_field('button-url'); ?>" class="btn btn-primary service-btn">Explore more</a>
    </div>
+   <div class="big-square-background img-fluid"><?= $big_square_background ?></div>
    <div class="smallest-square-background"><?= $smallest_square_background ?></div>
 </section>

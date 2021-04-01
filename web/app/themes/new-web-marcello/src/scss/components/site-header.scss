@@ -7,14 +7,14 @@
       }
 
       .logo-wrapper{
-         z-index: 1;
+         z-index: 10;
          .logo-img {
             max-height: 50px;
          }
       }
 
       .login-wrapper{
-         z-index: 1;
+         z-index: 10;
          @include media-breakpoint-down(md) {
             display: none;
          }

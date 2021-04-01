@@ -18,10 +18,14 @@
       top: -50px;
       left: 0;
       overflow: hidden;
+      z-index: 0;
+      pointer-events: none;
    }
    .small-square-background{
       position: absolute;
       left: 0;
       bottom: -80px;
+      z-index: 0;
+      pointer-events: none;
    }
 }

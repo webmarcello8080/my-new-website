@@ -3,16 +3,43 @@
    position: fixed;
    z-index: 2;
    top: 0;
-   background: linear-gradient(to bottom right, Tomato, Wheat);
    left: -100%;
-   opacity: .5;
-}
-.menu-header-menu-container{
+
    .menu{
+      list-style-type: none;
+      padding-left: 0;
+
       .menu-item{
+
+         a{
+            position: relative; 
+            font-size: 3 * $font-size-base;
+            font-weight: bold;
+            color: $primary;
+            text-decoration: none;
+         }
+
+         a:after {    
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 4px;
+            left: 50%;
+            position: absolute;
+            background: $primary;
+            transition: width 0.7s ease 0s, left 0.7s ease 0s;
+            width: 0;
+         }
+         a:hover:after { 
+            width: 100%; 
+            left: 0; 
+         }
+
          .sub-menu{
+            padding-left: 0;
+            list-style-type: none;
             display: none;
-            transition: all 0.5s ease;
+            transition: all 1s ease;
          }
       }
    }
