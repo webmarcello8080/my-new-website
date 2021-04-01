@@ -21,6 +21,8 @@ $smallest_square_background = file_get_contents( get_template_directory() . "/di
          <?php endif; ?>
       </div>
    </div>
-   <a href="<?php block_field('button-url'); ?>" class="btn btn-primary service-btn">Explore more</a>
+   <div class="mt-4 blog-block-footer">
+      <a href="<?php block_field('button-url'); ?>" class="btn btn-primary service-btn">Explore more</a>
+   </div>
    <div class="smallest-square-background"><?= $smallest_square_background ?></div>
 </section>
