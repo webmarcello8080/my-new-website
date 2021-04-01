@@ -22,7 +22,7 @@
          </div>
 
          <div class="col-2 text-right align-self-center login-wrapper">
-            <?php $buttons->get_login('Login', '_blank') ?>
+            <?php $buttons->get_login('Login', '_blank', 'btn btn-outline-primary') ?>
          </div>
 
       </div>
