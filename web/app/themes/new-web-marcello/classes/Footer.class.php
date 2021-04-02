@@ -29,7 +29,7 @@ class Footer{
          'name'          => 'Copyright Area',
          'id'            => 'copyright_area',
          'description'   => 'Copyright section on the bottom of the site',
-         'before_widget' => '<section class="container-fluid text-center copyright-area">',
+         'before_widget' => '<section class="container-fluid text-center py-3 copyright-area">',
          'after_widget'  => '</section>',
          'before_title'  => '<h4>',
          'after_title'   => '</h4>',
