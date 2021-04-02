@@ -3,9 +3,11 @@ $categories = new \NewWebMarcello\Categories;
 ?>
 <div class="col-md-4">
    <div class="card border-0 rounded-lg my-3 text-left single-blog">
-      <div class="card-img-top p-3 blog-img">
-         <a href="<?php the_permalink() ?>" ><?php the_post_thumbnail( 'large', ['class' => 'img-fluid rounded'] ); ?></a>
-      </div>
+      <?php if(has_post_thumbnail()): ?>
+         <div class="card-img-top p-3 blog-img">
+            <a href="<?php the_permalink() ?>" ><?php the_post_thumbnail( 'large', ['class' => 'img-fluid rounded'] ); ?></a>
+         </div>
+      <?php endif; ?>
       <div class="card-body blog-header">
          <h6 class="blog-author"><?= get_the_author_meta('display_name'); ?></h6>
          <h6 class="card-title mb-2 blog-title"><a href="<?php the_permalink() ?>" ><?php the_title(); ?></a></h6>

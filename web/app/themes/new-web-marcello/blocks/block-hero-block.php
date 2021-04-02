@@ -7,7 +7,7 @@ $hero_background = file_get_contents( get_template_directory() . "/dist/images/h
     <div class="row">
       <div class="col-md-6">
         <h1><?php block_field('header-text'); ?></h1>
-        <p><?php block_field('main-text'); ?></p>
+        <p class="lead"><?php block_field('main-text'); ?></p>
         <p><a href="#" class="btn btn-primary"><?php block_field('button-text'); ?></a></p>
       </div>
     </div>

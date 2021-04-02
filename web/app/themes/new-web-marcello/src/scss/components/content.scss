@@ -6,6 +6,25 @@
       .page-header{
          padding-top: $header-height;
          padding-bottom: $header-height * 0.5;
+         background-repeat: no-repeat;
+         background-size: cover;
+         box-shadow: inset 0 0 0 1000px rgba($light, 0.85);
+
+         .mid-square-background{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0;
+            pointer-events: none;  
+         }
+         .smallest-square-background{
+            position: absolute;
+            right: 125px;
+            top: 200px;
+            z-index: 0;
+            pointer-events: none;
+            animation: Rotating 45s linear infinite;
+         }
       }
    }
 }

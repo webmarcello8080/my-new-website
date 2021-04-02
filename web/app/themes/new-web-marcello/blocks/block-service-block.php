@@ -11,7 +11,7 @@ $application_service_icon = file_get_contents( get_template_directory() . "/dist
 <section class="service-block py-5 text-center bg-light <?php block_field('className'); ?>">
    <div class="container-xl service-wrapper">
       <h2><?php block_field('block-title'); ?></h2>
-      <p><?php block_field('block-description'); ?></p>
+      <p class="lead"><?php block_field('block-description'); ?></p>
       <div class="row mt-5">
          <div class="col-md-4 service">
             <div class="card pb-4 border-0 rounded-lg">
