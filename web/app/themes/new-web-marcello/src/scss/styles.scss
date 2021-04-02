@@ -4,11 +4,11 @@
 @import './theme/theme_typography.scss';
 @import './theme/theme_width.scss';
 
-@import './components/site-header.scss';
-@import './components/content.scss';
-@import './components/pagination.scss';
-@import './components/category.scss';
+@import './components/pages/content.scss';
+@import './components/pages/pagination.scss';
+@import './components/pages/category.scss';
 @import './components/animations.scss';
+@import './components/menu/site-header.scss';
 @import './components/menu/menu-icon.scss';
 @import './components/menu/menu.scss';
 @import './components/blocks/hero-block.scss';
