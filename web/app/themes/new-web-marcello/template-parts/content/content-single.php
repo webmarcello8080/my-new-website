@@ -10,7 +10,7 @@ $small_horizontal_line = file_get_contents( get_template_directory() . "/dist/im
 	<?php endif; ?>
 
 	<div class="post-entry-content">
-	   <h3 class="post-description text-center mb-2"><?= get_post_meta(get_the_ID(), 'H2_text', TRUE); ?></h3>
+	   <h2 class="post-description text-center mb-2"><?= get_post_meta(get_the_ID(), 'H2_text', TRUE); ?></h2>
 		<div class="small-horizontal-line text-center mb-5"><?= $small_horizontal_line ?></div>
 		<?php
 

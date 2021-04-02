@@ -10,7 +10,7 @@ $smallest_square_background = file_get_contents( get_template_directory() . "/di
 <section class="blog-block py-5 text-center bg-light <?php block_field('className'); ?>">
    <div class="container-xl blog-wrapper">
       <h2><?php block_field('block-title'); ?></h2>
-      <p><?php block_field('block-description'); ?></p>
+      <p class="lead"><?php block_field('block-description'); ?></p>
       <div class="row mt-5">
          <?php if ( $query_result->have_posts() ) : ?>
             <?php while ( $query_result->have_posts() ) : $query_result->the_post(); ?>
