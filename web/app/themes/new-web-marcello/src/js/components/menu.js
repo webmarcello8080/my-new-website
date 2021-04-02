@@ -16,10 +16,10 @@ jQuery(function ($) {
    $('.sub-menu').click(function (event) {
       event.stopPropagation();
    })
-
    $('.menu-item-has-children').click(function (event) {
       event.preventDefault();
       $(this).find('.sub-menu').slideToggle();
+      $(this).find(':before').css({ 'transform': 'rotate(45deg)' });
    })
 
 });

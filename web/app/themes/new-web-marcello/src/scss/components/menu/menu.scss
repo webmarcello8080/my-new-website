@@ -8,8 +8,30 @@
    .menu{
       list-style-type: none;
       padding-left: 0;
+      margin-left: 43%;
+      @include media-breakpoint-down(md) {
+         margin-left: 30%;
+      }
 
       .menu-item{
+
+         &.menu-item-has-children{
+            cursor: pointer;
+            margin-left: -50px;
+
+            &:before{
+               content: "+";
+               font-size: 3 * $font-size-base;
+               color: $primary;
+               margin-right: $spacer;
+            }
+         }
+
+         .sub-menu{
+            list-style-type: none;
+            display: none;
+            padding-left: 50px;
+         }
 
          a{
             position: relative; 
@@ -18,7 +40,6 @@
             color: $primary;
             text-decoration: none;
          }
-
          a:after {    
             bottom: 0;
             content: "";
@@ -35,12 +56,6 @@
             left: 0; 
          }
 
-         .sub-menu{
-            padding-left: 0;
-            list-style-type: none;
-            display: none;
-            transition: all 1s ease;
-         }
       }
    }
 }
