@@ -1,7 +1,3 @@
-<?php get_header() ?>
-
-<?php get_template_part( 'template-parts/header/home-header' ); ?>
-
 <div class="container-xl category-wrapper">
 	
 	<?php if ( have_posts() ) : ?>
@@ -32,5 +28,3 @@
 	<?php endif; ?>
 
 </div>
-
-<?php get_footer() ?>

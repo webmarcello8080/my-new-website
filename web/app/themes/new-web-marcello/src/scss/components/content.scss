@@ -2,5 +2,10 @@
    #main{
       min-height: 80vh;
       margin-top: -$header-height;
+
+      .page-header{
+         padding-top: $header-height;
+         padding-bottom: $header-height * 0.5;
+      }
    }
 }

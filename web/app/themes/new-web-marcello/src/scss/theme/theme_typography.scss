@@ -11,14 +11,6 @@ h1{
 p{
   margin-bottom: $spacer;
 }
-$container-max-widths: (
-  xl: $container
-);
-@include media-breakpoint-up(lx) {
-  .container-xl, .container-lg, .container-md, .container-sm, .container {
-    max-width: $container;
-  }
-}
 
 // buttons
 .btn{
@@ -30,6 +22,7 @@ $container-max-widths: (
 .btn-lg{
   padding: 10px 32px;
 }
+
 // badges
 .badge{
   padding: 5px 10px;
