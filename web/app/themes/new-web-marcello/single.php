@@ -4,6 +4,9 @@ get_header();
 /* Start the Loop */
 while ( have_posts() ) :
 	the_post();
+	
+	get_template_part( 'template-parts/header/single-header' );
+
 	get_template_part( 'template-parts/content/content-single' );
 
 	// If comments are open or there is at least one comment, load up the comment template.

@@ -26,5 +26,45 @@
             animation: Rotating 45s linear infinite;
          }
       }
+
+      .post-header{
+         padding-top: $header-height;
+         padding-bottom: $header-height * 2;
+
+         .mid-square-background{
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0;
+            pointer-events: none;  
+         }
+         .smallest-square-background{
+            position: absolute;
+            right: 125px;
+            top: 200px;
+            z-index: 0;
+            pointer-events: none;
+            animation: Rotating 45s linear infinite;
+         }
+      }
+
+      .post{
+
+         .post-img{
+            width: 100%;
+            height: auto;
+         }
+
+         .post-entry-content{
+            img{
+               max-width: 100%;
+               height: auto;
+            }
+         }
+
+         &.has-post-thumbnail{
+            margin-top: -$header-height * 2;
+         }
+      }
    }
 }
