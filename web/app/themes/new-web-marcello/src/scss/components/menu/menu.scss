@@ -10,7 +10,7 @@
       padding-left: 0;
       margin-left: 43%;
       @include media-breakpoint-down(md) {
-         margin-left: 30%;
+         margin-left: $spacer * 3;
       }
 
       .menu-item{

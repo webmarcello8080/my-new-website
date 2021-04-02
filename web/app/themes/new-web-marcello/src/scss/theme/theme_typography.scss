@@ -7,7 +7,9 @@ h1, h2, h3, h4, h5, h6{
 }
 h1{
   font-size: 3 * $font-size-base;
-  line-height: 60px;
+  @include media-breakpoint-down(md) {
+    font-size: $font-size-base * 2.5;
+  }
 }
 p{
   margin-bottom: $spacer;
@@ -23,8 +25,106 @@ p{
 .btn-lg{
   padding: 10px 32px;
 }
+.wp-block-button__link {
+  color: $white;
+  background-color: $primary;
+  border-color: $primary;
+}
 
 // badges
 .badge{
   padding: 5px 10px;
+}
+
+// blockquote
+blockquote{
+  &.wp-block-quote{
+    border-left: 3px solid $primary;
+    background-color: $light;
+    font-size: $font-size-base * 1.25;
+    font-weight: bold;
+    font-style: italic;
+    margin-top: $spacer * 2;
+    margin-bottom: $spacer * 2;
+    padding: $spacer $spacer $spacer $spacer * 4 !important;
+    position: relative;
+
+    &:before{
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -4px;
+      height: 2em;
+      width: 5px;
+      margin-top: -1em;
+    }
+
+    &:after{
+      content: "\201D";
+      font-size: 80px;
+      position: absolute;
+      line-height: 1;
+      top: 3px;
+      left: 2px;
+    }
+
+    cite{
+      display: block;
+      font-size: $font-size-base;
+      font-weight: normal;
+      margin-top: $spacer;
+      &:before{
+        content: "~";
+        margin-right: $spacer * 0.5;
+      }
+    }
+  }
+}
+
+.wp-block-pullquote{
+  padding-top: 0;
+  padding-bottom: 0;
+
+  blockquote{
+    position: relative;
+    background-color: $light !important;
+    margin-top: $spacer * 2;
+    margin-bottom: $spacer * 2;
+    padding: $spacer * 3 $spacer;
+    font-weight: bold;
+    font-style: italic;
+    border-radius: $border-radius;
+    border: 2px solid $primary;
+    box-shadow: 2px 2px 4px rgba($body-color, 0.25);
+
+    p{
+      font-size: $font-size-base * 1.75;
+    }
+    cite {
+      display: block;
+      text-align: center;
+      font-weight: bold;
+      font-style: normal;
+      font-size: $font-size-base;
+      text-transform: uppercase;
+      color: $primary;
+    }
+  }
+}
+
+// IMG
+.wp-block-image {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+// LIST
+article{
+  ul{
+    margin-top: $spacer * 2;
+    margin-bottom: $spacer * 2;
+    padding-left: $spacer * 3 !important;
+  }
 }

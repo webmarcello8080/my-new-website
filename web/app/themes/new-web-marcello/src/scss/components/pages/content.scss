@@ -30,6 +30,9 @@
       .post-header{
          padding-top: $header-height;
          padding-bottom: $header-height * 2;
+         @include media-breakpoint-down(md) {
+            padding-bottom: $header-height * 0.25;
+         }
 
          .mid-square-background{
             position: absolute;
@@ -64,6 +67,9 @@
 
          &.has-post-thumbnail{
             margin-top: -$header-height * 2;
+            @include media-breakpoint-down(md) {
+               margin-top: 0;
+            }
          }
       }
    }

@@ -8,7 +8,7 @@ $categories = new \NewWebMarcello\Categories;
             <a href="<?php the_permalink() ?>" ><?php the_post_thumbnail( 'large', ['class' => 'img-fluid rounded'] ); ?></a>
          </div>
       <?php endif; ?>
-      <div class="card-body blog-header">
+      <div class="card-body pt-0 blog-header">
          <h6 class="blog-author"><?= get_the_author_meta('display_name'); ?></h6>
          <h6 class="card-title mb-2 blog-title"><a href="<?php the_permalink() ?>" ><?php the_title(); ?></a></h6>
       </div>

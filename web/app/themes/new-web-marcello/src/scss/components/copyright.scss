@@ -1,8 +1,9 @@
 .copyright-area{
-   background-color: darken( $primary, 10% );
+   background-color: darken( $primary, 15% );
    color: $white;
    p{
       margin-bottom: 0;
+      font-size: $font-size-base * 0.80;
       a{
          color: $yellow;
       }
