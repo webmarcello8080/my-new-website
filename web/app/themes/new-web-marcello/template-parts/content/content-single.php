@@ -29,4 +29,6 @@ $small_horizontal_line = file_get_contents( get_template_directory() . "/dist/im
 		?>
 	</div><!-- .entry-content -->
 
+	<?php get_template_part( 'template-parts/loop/latest-posts' ); ?>
+
 </article><!-- #post-<?php the_ID(); ?> -->

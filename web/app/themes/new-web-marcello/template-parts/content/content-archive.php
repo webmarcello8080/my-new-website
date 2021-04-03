@@ -24,7 +24,7 @@
 		?>
 		
 	<?php else : ?>
-		<p><?php __('No Posts', 'new_web_marcello'); ?></p>
+		<p><?= __('No Posts', 'new_web_marcello'); ?></p>
 	<?php endif; ?>
 
 </div>
