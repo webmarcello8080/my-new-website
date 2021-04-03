@@ -4,7 +4,7 @@
 
    .smallest-square-background{
       position: absolute;
-      left: 125px;
+      left: 10%;
       top: 250px;
       z-index: 0;
       pointer-events: none;
@@ -15,6 +15,7 @@
       top: 0;
       right: 0px;
       z-index: -1;
+      pointer-events: none;
    }
 }
 
