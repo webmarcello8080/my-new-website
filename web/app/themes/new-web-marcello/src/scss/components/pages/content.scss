@@ -34,30 +34,27 @@
             padding-bottom: $header-height * 0.25;
          }
 
-         .mid-square-background{
-            position: absolute;
-            top: 0;
-            right: 0;
-            z-index: 0;
-            pointer-events: none;  
-         }
          .smallest-square-background{
             position: absolute;
-            right: 125px;
+            left: 125px;
             top: 200px;
             z-index: 0;
             pointer-events: none;
             animation: Rotating 45s linear infinite;
          }
+         .hero-background-image {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            z-index: -1;
+         }
       }
 
       .post{
-
          .post-img{
             width: 100%;
             height: auto;
          }
-
          .post-entry-content{
             img{
                max-width: 100%;

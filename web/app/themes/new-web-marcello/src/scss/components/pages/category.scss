@@ -2,20 +2,19 @@
    padding-top: $header-height;
    padding-bottom: $header-height * 2;
 
-   .mid-square-background{
-      position: absolute;
-      top: 0;
-      right: 0;
-      z-index: 0;
-      pointer-events: none;  
-   }
    .smallest-square-background{
       position: absolute;
-      right: 125px;
+      left: 125px;
       top: 250px;
       z-index: 0;
       pointer-events: none;
       animation: Rotating 45s linear infinite;
+   }
+   .hero-background-image {
+      position: absolute;
+      top: 0;
+      right: 0px;
+      z-index: -1;
    }
 }
 
