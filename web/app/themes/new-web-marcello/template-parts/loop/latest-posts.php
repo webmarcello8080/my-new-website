@@ -13,7 +13,7 @@ $category_link = get_category_link( $category_id );
 $big_square_background = file_get_contents( get_template_directory() . "/dist/images/big-square-background.svg");
 $smallest_square_background = file_get_contents( get_template_directory() . "/dist/images/smallest-square-background.svg");
 ?>
-<section class="blog-block py-5 bg-primary text-center">
+<section class="blog-block mt-5 py-5 bg-primary text-center">
    <div class="container-xl blog-wrapper">
       <h2 class="blog-block-title text-light"><?= __('You May Like', 'new_web_marcello') ?></h2>
       <div class="row mt-5">

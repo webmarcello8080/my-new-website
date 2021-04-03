@@ -139,3 +139,14 @@ article{
     }
   }
 }
+
+// FORM
+textarea, input {
+  &:not([type='submit']):not([type='reset']):not([type='checkbox']):not([type='radio']){
+    width: 100%;
+    padding: $spacer * 0.5 $spacer;
+    box-sizing: border-box;
+    border-radius: $border-radius-sm;
+    border-color: $gray-300;
+  }
+}

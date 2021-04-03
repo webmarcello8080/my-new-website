@@ -1,0 +1,19 @@
+.comments-area{
+   .comments-title{
+      
+   }
+   .comment-list{
+      list-style-type: none;
+      padding-inline-start: 0;
+      .comment{
+         padding-left: $spacer * 1.5;
+         margin-bottom: $spacer * 2;
+         border-left: 3px solid $primary;
+
+         .children{
+            list-style-type: none;
+            padding-inline-start: $spacer * 1.5;
+         }
+      }
+   }
+}
