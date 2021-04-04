@@ -1,5 +1,5 @@
-<?php $header = new \NewWebMarcello\Header(); ?>
-<?php $buttons = new \NewWebMarcello\Buttons(); ?>
+<?php $header = new \NewWebMarcello\frontend\Header(); ?>
+<?php $buttons = new \NewWebMarcello\frontend\Buttons(); ?>
 <header class="site-header">
    <div class="container-xl">
       <div class="row">

@@ -1,5 +1,5 @@
 <?php
-$categories = new \NewWebMarcello\Categories; 
+$categories = new \NewWebMarcello\frontend\Categories; 
 $small_horizontal_line = file_get_contents( get_template_directory() . "/dist/images/small-horizontal-line.svg");
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>

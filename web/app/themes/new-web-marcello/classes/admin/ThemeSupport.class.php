@@ -1,6 +1,6 @@
 <?php
 
-namespace NewWebMarcello;
+namespace NewWebMarcello\Admin;
 
 class ThemeSupport{
    

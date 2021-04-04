@@ -1,5 +1,5 @@
 <?php 
-$categories = new \NewWebMarcello\Categories;
+$categories = new \NewWebMarcello\frontend\Categories;
 ?>
 <div class="col-md-4">
    <div class="card border-0 rounded-lg my-3 text-left single-blog">
