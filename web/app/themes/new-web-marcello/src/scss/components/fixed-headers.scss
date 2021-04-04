@@ -11,19 +11,19 @@
 
   td {
       padding: 0 4em !important; 
-      border: 1px solid $white  !important;
+      border: 1px solid $gray-300  !important;
    }
    thead {
       transform: translateZ(0);
       th {
-         background: #999;
+         background: $light;
          text-align: center;
       }
    }
    tbody{
       th {
          text-align: right;
-         background: #999;
+         background: $light;
          transform: translateZ(0);
       }
    }
