@@ -1,0 +1,30 @@
+#fixed-headers {
+   display: block;
+   width: 50em;
+   max-width: 100%;
+   position: relative;
+
+  border-collapse: collapse;
+  height: 300px; 
+  display: block; 
+  overflow: auto; 
+
+  td {
+      padding: 0 4em !important; 
+      border: 1px solid $white  !important;
+   }
+   thead {
+      transform: translateZ(0);
+      th {
+         background: #999;
+         text-align: center;
+      }
+   }
+   tbody{
+      th {
+         text-align: right;
+         background: #999;
+         transform: translateZ(0);
+      }
+   }
+}
