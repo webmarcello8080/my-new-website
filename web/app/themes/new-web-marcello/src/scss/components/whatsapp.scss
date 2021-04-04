@@ -1,0 +1,13 @@
+.whatapp-wrapper{
+   input, textarea{
+      margin-bottom: $spacer;
+   }
+   .wp-phone-message-button{
+      padding: 12px 20px 12px 20px;
+      color: $white;
+      background: #1abc9c;
+      font-size: 18px;
+      width: 100%;
+      border: 1px solid #16a085;
+   }
+}

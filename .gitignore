@@ -27,6 +27,7 @@ wp-cli.local.yml
 
 # Marcello Stuff
 !web/app/plugins/crayon-syntax-highlighter
+!web/app/plugins/wp-phone-message-premium
 
 web/app/themes/new-web-marcello/node_modules
 web/app/themes/new-web-marcello/dist
