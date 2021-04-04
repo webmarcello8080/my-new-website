@@ -11,6 +11,9 @@ $drupal_logo = file_get_contents( get_template_directory() . "/dist/images/logos
 $jquery_logo = file_get_contents( get_template_directory() . "/dist/images/logos/jquery-logo.svg");
 $gulp_logo = file_get_contents( get_template_directory() . "/dist/images/logos/gulp-logo.svg");
 $git_logo = file_get_contents( get_template_directory() . "/dist/images/logos/git-logo.svg");
+// get theme options
+$new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
+$standard_button_text_0 = $new_web_marcello_theme_options['standard_button_text_0'];
 ?>
 <section class="skills-block <?php block_field('className'); ?>">
   <div class="container-xl py-5 skills-wrapper">
@@ -19,7 +22,7 @@ $git_logo = file_get_contents( get_template_directory() . "/dist/images/logos/gi
          <h6><?php block_field('top-title'); ?></h6>
          <h2><?php block_field('block-title'); ?></h2>
          <p class="lead"><?php block_field('block-body'); ?></p>
-         <p><a href="<?php block_field('button-url'); ?>" class="btn btn-primary">Explore more</a></p>
+         <p><a href="<?php block_field('button-url'); ?>" class="btn btn-primary"><?= esc_attr($standard_button_text_0) ?></a></p>
       </div>
       <div class="col-lg-8 skills-img-wrapper" style="background-image:url(<?= $world_map_background ?>)">
         <div class="php-logo"><?= $php_logo ?></div>

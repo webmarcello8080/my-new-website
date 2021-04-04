@@ -1,5 +1,10 @@
-<?php $header = new \NewWebMarcello\frontend\Header(); ?>
-<?php $buttons = new \NewWebMarcello\frontend\Buttons(); ?>
+<?php 
+$header = new \NewWebMarcello\frontend\Header();
+$buttons = new \NewWebMarcello\frontend\Buttons(); 
+// get theme options
+$new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
+$login_button_text_2 = $new_web_marcello_theme_options['login_button_text_2'];
+?>
 <header class="site-header">
    <div class="container-xl">
       <div class="row">
@@ -22,7 +27,7 @@
          </div>
 
          <div class="col-2 text-right align-self-center login-wrapper">
-            <?php $buttons->get_login('Login', '_blank', 'btn btn-outline-primary') ?>
+            <?php $buttons->get_login( $login_button_text_2, '_blank', 'btn btn-outline-primary') ?>
          </div>
 
       </div>

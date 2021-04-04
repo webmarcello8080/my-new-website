@@ -9,6 +9,9 @@ if ( post_password_required() ) {
 }
 
 $comment_count = get_comments_number();
+// get theme options
+$new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
+$comment_form_title_6 = $new_web_marcello_theme_options['comment_form_title_6'];
 ?>
 
 <div id="comments" class="comments-area py-4 bg-light <?php echo get_option( 'show_avatars' ) ? 'show-avatars' : ''; ?>">
@@ -76,7 +79,7 @@ $comment_count = get_comments_number();
 		array(
 			'logged_in_as'       => null,
 			'class_container'    => 'comment-respond post-container-width',
-			'title_reply'        => esc_html__( 'Click to Leave a Comment', 'new_web_marcello' ),
+			'title_reply'        => esc_html__( $comment_form_title_6, 'new_web_marcello' ),
 			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title text-center">',
 			'title_reply_after'  => '</h2>',
 			'class_submit'       => 'submit btn btn-primary',

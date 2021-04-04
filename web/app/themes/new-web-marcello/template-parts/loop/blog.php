@@ -1,5 +1,8 @@
 <?php 
 $categories = new \NewWebMarcello\frontend\Categories;
+// get theme options
+$new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
+$read_more_7 = $new_web_marcello_theme_options['read_more_7'];
 ?>
 <div class="col-md-4">
    <div class="card border-0 rounded-lg my-3 text-left single-blog">
@@ -17,7 +20,7 @@ $categories = new \NewWebMarcello\frontend\Categories;
          <p class="card-text blog-text mt-3"><small><?= get_the_excerpt() ?></small></p>
          <div class="d-flex justify-content-between">
             <div class="blog-date"><?= get_the_date(); ?></div>
-            <h6 class="blog-read-more"><a href="<?php the_permalink() ?>" >Read More ...</a></h6>
+            <h6 class="blog-read-more"><a href="<?php the_permalink() ?>" ><?= esc_attr($read_more_7) ?></a></h6>
          </div>
       </div>
    </div>

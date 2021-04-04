@@ -12,10 +12,17 @@ $category_link = get_category_link( $category_id );
 // get background images
 $big_square_background = file_get_contents( get_template_directory() . "/dist/images/big-square-background.svg");
 $smallest_square_background = file_get_contents( get_template_directory() . "/dist/images/smallest-square-background.svg");
+// get theme options
+$new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
+$standard_button_text_0 = $new_web_marcello_theme_options['standard_button_text_0'];
+// get theme options
+$new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
+$no_posts_text_1 = $new_web_marcello_theme_options['no_posts_text_1'];
+$latest_post_title_4 = $new_web_marcello_theme_options['latest_post_title_4'];
 ?>
 <section class="blog-block mt-5 py-5 bg-primary text-center">
    <div class="container-xl blog-wrapper">
-      <h2 class="blog-block-title text-light"><?= __('You May Like', 'new_web_marcello') ?></h2>
+      <h2 class="blog-block-title text-light"><?= esc_attr($latest_post_title_4) ?></h2>
       <div class="row mt-5">
          <?php if ( $query_result->have_posts() ) : ?>
             <?php while ( $query_result->have_posts() ) : $query_result->the_post(); ?>
@@ -23,12 +30,12 @@ $smallest_square_background = file_get_contents( get_template_directory() . "/di
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
          <?php else : ?>
-            <p><?= __('No Posts', 'new_web_marcello'); ?></p>
+            <p><?= esc_attr($no_posts_text_1) ?></p>
          <?php endif; ?>
       </div>
    </div>
    <div class="mt-4 blog-block-footer">
-      <a href="<?= esc_url( $category_link ); ?>" class="btn btn-light blog-block-btn"><?= __('Explore more', 'new_web_marcello') ?></a>
+      <a href="<?= esc_url( $category_link ); ?>" class="btn btn-light blog-block-btn"><?= esc_attr($standard_button_text_0) ?></a>
    </div>
    <div class="big-square-background img-fluid"><?= $big_square_background ?></div>
    <div class="smallest-square-background"><?= $smallest_square_background ?></div>

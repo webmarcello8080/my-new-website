@@ -21,3 +21,5 @@ $args = [
 new \NewWebMarcello\frontend\Head($args);
 new \NewWebMarcello\frontend\Menu();
 new \NewWebMarcello\admin\Footer();
+if ( is_admin() )
+  new \NewWebMarcello\admin\Menu();

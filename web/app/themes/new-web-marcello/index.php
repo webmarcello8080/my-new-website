@@ -1,4 +1,9 @@
-<?php get_header() ?>
+<?php 
+// get theme options
+$new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
+$no_posts_text_1 = $new_web_marcello_theme_options['no_posts_text_1'];
+get_header() 
+?>
 
 <?php get_template_part( 'template-parts/header/home-header' ); ?>
 
@@ -29,7 +34,7 @@
 		
 	<?php else : ?>
 
-		<h2><?=  __('No Posts Found', 'new_web_marcello'); ?></h2>
+		<h2><?= esc_attr($no_posts_text_1) ?></h2>
 
 	<?php endif; ?>
 

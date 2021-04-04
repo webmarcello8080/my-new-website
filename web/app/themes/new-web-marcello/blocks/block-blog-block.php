@@ -6,6 +6,10 @@ $query_result = new WP_Query( array(
 // get background images
 $big_square_background = file_get_contents( get_template_directory() . "/dist/images/big-square-background.svg");
 $smallest_square_background = file_get_contents( get_template_directory() . "/dist/images/smallest-square-background.svg");
+// get theme options
+$new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
+$standard_button_text_0 = $new_web_marcello_theme_options['standard_button_text_0'];
+$no_posts_text_1 = $new_web_marcello_theme_options['no_posts_text_1'];
 ?>
 <section class="blog-block py-5 text-center bg-light <?php block_field('className'); ?>">
    <div class="container-xl blog-wrapper">
@@ -18,12 +22,12 @@ $smallest_square_background = file_get_contents( get_template_directory() . "/di
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
          <?php else : ?>
-            <p><?= __('No Posts', 'new_web_marcello'); ?></p>
+            <p><?= esc_attr($no_posts_text_1) ?></p>
          <?php endif; ?>
       </div>
    </div>
    <div class="mt-4 blog-block-footer">
-      <a href="<?php block_field('button-url'); ?>" class="btn btn-primary blog-block-btn">Explore more</a>
+      <a href="<?php block_field('button-url'); ?>" class="btn btn-primary blog-block-btn"><?= esc_attr($standard_button_text_0) ?></a>
    </div>
    <div class="big-square-background img-fluid"><?= $big_square_background ?></div>
    <div class="smallest-square-background"><?= $smallest_square_background ?></div>

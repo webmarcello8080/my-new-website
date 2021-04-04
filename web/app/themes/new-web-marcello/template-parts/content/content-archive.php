@@ -1,3 +1,8 @@
+<?php 
+// get theme options
+$new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
+$no_posts_text_1 = $new_web_marcello_theme_options['no_posts_text_1'];
+?>
 <div class="container-xl category-wrapper">
 	
 	<?php if ( have_posts() ) : ?>
@@ -24,7 +29,7 @@
 		?>
 		
 	<?php else : ?>
-		<p><?= __('No Posts', 'new_web_marcello'); ?></p>
+		<p><?= esc_attr($no_posts_text_1) ?></p>
 	<?php endif; ?>
 
 </div>
