@@ -13,4 +13,14 @@
          }
       }
    }
+
+   .comment-respond{
+      .comment-reply-title{
+         cursor: pointer;
+         text-decoration: underline;
+      }
+      .comment-form{
+         display: none;
+      }
+   }
 }

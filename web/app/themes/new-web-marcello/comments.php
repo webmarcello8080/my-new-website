@@ -76,10 +76,11 @@ $comment_count = get_comments_number();
 		array(
 			'logged_in_as'       => null,
 			'class_container'    => 'comment-respond post-container-width',
-			'title_reply'        => esc_html__( 'Leave a comment', 'new_web_marcello' ),
+			'title_reply'        => esc_html__( 'Click to Leave a Comment', 'new_web_marcello' ),
 			'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title text-center">',
 			'title_reply_after'  => '</h2>',
-			'class_submit'       => 'submit btn btn-primary'
+			'class_submit'       => 'submit btn btn-primary',
+			'comment_notes_before' => ' ',
 		)
 	);
 	?>
