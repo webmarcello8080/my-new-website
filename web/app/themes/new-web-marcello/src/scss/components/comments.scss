@@ -1,7 +1,4 @@
 .comments-area{
-   .comments-title{
-      
-   }
    .comment-list{
       list-style-type: none;
       padding-inline-start: 0;
@@ -12,7 +9,7 @@
 
          .children{
             list-style-type: none;
-            padding-inline-start: $spacer * 1.5;
+            padding-inline-start: 0;
          }
       }
    }

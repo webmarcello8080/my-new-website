@@ -27,5 +27,5 @@
 
       </div>
    </div>
-   <?php get_template_part( 'template-parts/header/site-menu' ); ?>
+   <?php get_template_part( 'template-parts/menu/site-menu' ); ?>
 </header>

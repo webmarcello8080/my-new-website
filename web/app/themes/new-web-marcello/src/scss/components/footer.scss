@@ -1,0 +1,30 @@
+#footer{
+   .footer-wrapper{
+      .row{
+         .footer-left-section{
+            .footer-area-one-wrapper{
+               background-color: lighten($primary, 10);
+            }
+         }
+         .footer-right-section{
+            .footer-area-two-wrapper{
+               border-bottom: 1px solid rgba($light, 0.5);
+            }
+         }
+         .footer-area{
+            .menu{
+               list-style-type: none;
+               padding-inline-start: 0;
+               .menu-item{
+                  a{
+                     color: $white;
+                  }
+               }
+            }
+            .footer-area-title{
+               color: $light;
+            }
+         }
+      }
+   }
+}
