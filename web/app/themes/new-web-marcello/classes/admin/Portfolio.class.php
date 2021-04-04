@@ -13,7 +13,7 @@ namespace NewWebMarcello\Admin;
  */
 class Portfolio {
 
-   private $config = '{"title":"Portfolio Fields","prefix":"portfolio_fields_","domain":"new_web_marcello","class_name":"New_web_marcello","post-type":["post"],"context":"normal","priority":"default","cpt":"portfolio","fields":[{"type":"number","label":"Position","max":"100","min":"1","id":"portfolio_fields_position"},{"type":"media","label":"Portfolio Logo","return":"url","id":"portfolio_fields_portfolio-logo"},{"type":"media","label":"Image 1","return":"url","id":"portfolio_fields_image-1"},{"type":"media","label":"Image 2","return":"url","id":"portfolio_fields_image-2"},{"type":"media","label":"Image 3","return":"url","id":"portfolio_fields_image-3"},{"type":"media","label":"Image 4","return":"url","id":"portfolio_fields_image-4"}]}';
+   private $config = '{"title":"Portfolio Fields","prefix":"portfolio_fields_","domain":"new_web_marcello","class_name":"New_web_marcello","post-type":["portfolio"],"context":"normal","priority":"default","cpt":"portfolio","fields":[{"type":"number","label":"Position","max":"100","min":"1","id":"portfolio_fields_position"},{"type":"media","label":"Portfolio Logo","return":"url","id":"portfolio_fields_portfolio-logo"},{"type":"media","label":"Image 1","return":"url","id":"portfolio_fields_image-1"},{"type":"media","label":"Image 2","return":"url","id":"portfolio_fields_image-2"},{"type":"media","label":"Image 3","return":"url","id":"portfolio_fields_image-3"},{"type":"media","label":"Image 4","return":"url","id":"portfolio_fields_image-4"}]}';
 
    public function __construct() {
 		add_action( 'init', array( $this,'custom_post_type'), 0 );
