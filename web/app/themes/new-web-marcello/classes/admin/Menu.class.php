@@ -54,6 +54,27 @@ class Menu {
 			'new-web-marcello-theme-admin' // page
 		);
 
+   	add_settings_section(
+			'new_web_marcello_blog_section', // id
+			'Blog Section Settings', // title
+			array( $this, 'new_web_marcello_theme_section_info' ), // callback
+			'new-web-marcello-theme-admin' // page
+		);
+
+		add_settings_section(
+			'new_web_marcello_404_section', // id
+			'404 Page Settings', // title
+			array( $this, 'new_web_marcello_theme_section_info' ), // callback
+			'new-web-marcello-theme-admin' // page
+		);
+
+		add_settings_section(
+			'new_web_marcello_search_section', // id
+			'Search Bar Settings', // title
+			array( $this, 'new_web_marcello_theme_section_info' ), // callback
+			'new-web-marcello-theme-admin' // page
+		);
+
 		add_settings_field(
 			'standard_button_text_0', // id
 			'Standard Button Text', // title
@@ -83,7 +104,7 @@ class Menu {
 			'Latest Post Title', // title
 			array( $this, 'latest_post_title_4_callback' ), // callback
 			'new-web-marcello-theme-admin', // page
-			'new_web_marcello_theme_setting_section' // section
+			'new_web_marcello_blog_section' // section
 		);
 
   		add_settings_field(
@@ -91,7 +112,7 @@ class Menu {
 			'404 Page Title', // title
 			array( $this, 'page_404_title_3_callback' ), // callback
 			'new-web-marcello-theme-admin', // page
-			'new_web_marcello_theme_setting_section' // section
+			'new_web_marcello_404_section' // section
 		);
 
 		add_settings_field(
@@ -99,7 +120,7 @@ class Menu {
 			'404 Page Content', // title
 			array( $this, 'page_404_content_5_callback' ), // callback
 			'new-web-marcello-theme-admin', // page
-			'new_web_marcello_theme_setting_section' // section
+			'new_web_marcello_404_section' // section
 		);
 
 		add_settings_field(
@@ -107,15 +128,15 @@ class Menu {
 			'Comment Form Title', // title
 			array( $this, 'comment_form_title_6_callback' ), // callback
 			'new-web-marcello-theme-admin', // page
-			'new_web_marcello_theme_setting_section' // section
+			'new_web_marcello_blog_section' // section
 		);
 
 		add_settings_field(
 			'read_more_7', // id
-			'Read More', // title
+			'Read More Text', // title
 			array( $this, 'read_more_7_callback' ), // callback
 			'new-web-marcello-theme-admin', // page
-			'new_web_marcello_theme_setting_section' // section
+			'new_web_marcello_blog_section' // section
 		);
 	}
 
