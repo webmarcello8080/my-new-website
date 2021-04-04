@@ -1,4 +1,7 @@
 .site{
+   overflow-wrap: break-word;
+   overflow: hidden;
+
    #main{
       min-height: 80vh;
       margin-top: -$header-height;
