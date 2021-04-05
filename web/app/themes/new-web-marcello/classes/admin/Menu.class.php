@@ -107,6 +107,14 @@ class Menu {
 			'new_web_marcello_blog_section' // section
 		);
 
+		add_settings_field(
+			'404_page_header_3', // id
+			'404 Page Header Title', // title
+			array( $this, 'page_404_header_3_callback' ), // callback
+			'new-web-marcello-theme-admin', // page
+			'new_web_marcello_404_section' // section
+		);
+
   		add_settings_field(
 			'404_page_title_3', // id
 			'404 Page Title', // title
@@ -152,6 +160,10 @@ class Menu {
 
 		if ( isset( $input['login_button_text_2'] ) ) {
 			$sanitary_values['login_button_text_2'] = sanitize_text_field( $input['login_button_text_2'] );
+		}
+		
+		if ( isset( $input['404_page_header_3'] ) ) {
+			$sanitary_values['404_page_header_3'] = sanitize_text_field( $input['404_page_header_3'] );
 		}
 
 		if ( isset( $input['404_page_title_3'] ) ) {
@@ -206,6 +218,13 @@ class Menu {
 		printf(
 			'<input class="regular-text" type="text" name="new_web_marcello_theme_option_name[404_page_title_3]" id="404_page_title_3" value="%s">',
 			isset( $this->new_web_marcello_theme_options['404_page_title_3'] ) ? esc_attr( $this->new_web_marcello_theme_options['404_page_title_3']) : ''
+		);
+	}
+
+	public function page_404_header_3_callback() {
+		printf(
+			'<input class="regular-text" type="text" name="new_web_marcello_theme_option_name[404_page_header_3]" id="404_page_header_3" value="%s">',
+			isset( $this->new_web_marcello_theme_options['404_page_header_3'] ) ? esc_attr( $this->new_web_marcello_theme_options['404_page_header_3']) : ''
 		);
 	}
 

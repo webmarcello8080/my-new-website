@@ -2,6 +2,10 @@
 // get background images
 $hero_background = file_get_contents( get_template_directory() . "/dist/images/hero-background.svg");
 $smallest_square_background = file_get_contents( get_template_directory() . "/dist/images/smallest-square-background.svg");
+// archive page title
+var_dump( post_type_archive_title());
+var_dump( single_cat_title());
+
 ?>
 <header class="category-header">
    <div class="container-xl py-5 category-header-wrapper">

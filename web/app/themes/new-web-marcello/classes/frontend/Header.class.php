@@ -21,4 +21,20 @@ class Header{
          </a>
       <?php
    }
+
+   public function home_page_title(){
+      // get theme options
+      $new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
+      $page_404_header_3 = $new_web_marcello_theme_options['404_page_header_3'];
+
+      $page_title = get_bloginfo('description');
+      if(is_404()){
+         $page_title = esc_attr($page_404_header_3);
+      } 
+      if(is_search()){
+         $page_title = 'Search Result for: "' . get_search_query() .  '"';
+      }
+
+      return $page_title;
+   }
 }
