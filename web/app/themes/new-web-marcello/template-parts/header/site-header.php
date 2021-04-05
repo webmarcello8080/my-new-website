@@ -34,3 +34,4 @@ $login_button_text_2 = $new_web_marcello_theme_options['login_button_text_2'];
    </div>
    <?php get_template_part( 'template-parts/menu/site-menu' ); ?>
 </header>
+<div class="scroll-line" id="scrollIndicator"></div>

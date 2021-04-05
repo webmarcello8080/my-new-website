@@ -21,3 +21,11 @@
       }
    }
 }
+.scroll-line {
+   background: $primary;
+   height: $spacer * 0.4;
+   width: 0%;
+   position: fixed;
+   top: 0;
+   z-index: 100;
+}

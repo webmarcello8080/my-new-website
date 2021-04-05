@@ -28,6 +28,7 @@
                list-style-type: none;
                padding-inline-start: 0;
                .menu-item{
+                  margin-bottom: $spacer * 0.5;
                   a{
                      color: $white;
                   }

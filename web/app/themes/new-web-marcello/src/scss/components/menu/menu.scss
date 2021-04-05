@@ -31,6 +31,13 @@
             list-style-type: none;
             display: none;
             padding-left: 50px;
+            a{
+               font-size: 2.5 * $font-size-base;
+               &:before{
+                  content: "-";
+                  margin-right: $spacer;
+               }
+            }
          }
 
          a{
