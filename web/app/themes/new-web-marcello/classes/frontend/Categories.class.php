@@ -13,12 +13,14 @@ class Categories{
             $name = $category->name;
             $category_link = get_category_link( $category->term_id );
             echo '<a class="' . $classes . '" href="' . $category_link . '">' . esc_attr($name) . '</a>';
-            echo $spacer;
+            if (next($categories)==true){
+               echo $spacer;
+            }
          }
       }
    }
 
-     public function getCategoryList($post_id, $classes, $spacer = '', $taxonomy = ''){
+   public function getCategoryList($post_id, $classes, $spacer = '', $taxonomy = ''){
       $categories = $this->get_the_terms($post_id, $taxonomy);
       
       if($categories){
@@ -26,7 +28,9 @@ class Categories{
             
             $name = $category->name;
             echo '<span class="' . $classes . '" >' . esc_attr($name) . '</span>';
-            echo $spacer;
+            if (next($categories)==true){
+               echo $spacer;
+            }
          }
       }
    }

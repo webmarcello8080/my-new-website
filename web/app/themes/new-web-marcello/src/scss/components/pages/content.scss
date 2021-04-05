@@ -68,5 +68,55 @@
             }
          }
       }
+
+      .portfolio-header{
+         padding-top: $header-height;
+         padding-bottom: $header-height * 2;
+         @include media-breakpoint-down(md) {
+            padding-bottom: 0;
+         }
+
+         .smallest-square-background{
+            position: absolute;
+            left: 10%;
+            top: 200px;
+            z-index: 0;
+            pointer-events: none;
+            animation: Rotating 45s linear infinite;
+         }
+         .hero-background-image {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            z-index: -1;
+            pointer-events: none;
+         }
+      }
+
+      .portfolio{
+         margin-top: -$header-height * 2;
+         @include media-breakpoint-down(md) {
+            margin-top: 0;
+         }
+         .portfolio-entry-content{
+            .carousel{
+               .carousel-inner{
+                  .carousel-item{
+                     height: 700px;
+                     transition: transform 1s ease-in-out;
+                     .portfolio-carousel-img{
+                        height: 100%;
+                        width: auto;
+                        max-width: 100%;
+                     }
+                  }
+               }
+               .carousel-control-next,
+               .carousel-control-prev {
+                  filter: invert(100%);
+               }
+            }
+         }
+      }
    }
 }
