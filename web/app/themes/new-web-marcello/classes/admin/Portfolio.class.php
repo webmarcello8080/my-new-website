@@ -126,7 +126,7 @@ class Portfolio {
 			$query->set( 'posts_per_page' , -1 );
 			$query->set( 'meta_key', 'portfolio_fields_position');
 			$query->set( 'order' , 'asc' );
-			$query->set( 'orderby', 'meta_value');
+			$query->set( 'orderby', 'meta_value_num');
 			return;
 		}
 	}
