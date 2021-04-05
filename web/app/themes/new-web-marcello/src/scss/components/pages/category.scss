@@ -38,3 +38,37 @@
       }
    }
 }
+
+.portfolio-category-wrapper{
+   margin-top: -$header-height * 2;
+   .portfolio-columns{
+      column-gap: $spacer * 1.5;
+      .single-portfolio{
+         border: 0;
+         overflow: hidden;
+         border-radius: 0;
+
+         .portfolio-img{
+            position: relative;
+
+            &:hover{
+               .portfolio-overlay{
+                  height: 100%;
+               }
+            }
+            .portfolio-overlay{
+               position: absolute;
+               bottom: 0;
+               left: 0;
+               right: 0;
+               background-color: $light;
+               opacity: 0.85;
+               overflow: hidden;
+               width: 100%;
+               height: 0;
+               transition: 0.8s ease;
+            }
+         }
+      }
+   }
+}

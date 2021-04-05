@@ -25,6 +25,8 @@ class Portfolio {
 		add_action( 'admin_enqueue_scripts', [ $this, 'admin_enqueue_scripts' ] );
 		add_action( 'admin_head', [ $this, 'admin_head' ] );
 		add_action( 'save_post', [ $this, 'save_post' ] );
+
+		add_filter( 'pre_get_posts', array( $this, 'portfolio_custom_query'), 1 );
 	}
 
    // Register Custom Post Type
@@ -64,7 +66,7 @@ class Portfolio {
          'description'           => __( 'What I have been working on', 'new_web_marcello' ),
          'labels'                => $labels,
          'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-         // 'taxonomies'            => array( 'category', 'post_tag' ),
+         'taxonomies'            => array( 'post_tag' ),
          'hierarchical'          => false,
          'public'                => true,
          'show_ui'               => true,
@@ -117,6 +119,16 @@ class Portfolio {
 			'query_var' => true,
 			'rewrite' => array( 'slug' => 'topic' ),
 		));
+	}
+
+	public function portfolio_custom_query( $query ) {
+		if ( is_post_type_archive( 'portfolio' ) && $query->is_main_query() ) {
+			$query->set( 'posts_per_page' , -1 );
+			$query->set( 'meta_key', 'portfolio_fields_position');
+			$query->set( 'order' , 'asc' );
+			$query->set( 'orderby', 'meta_value');
+			return;
+		}
 	}
 
 	public function process_cpts() {

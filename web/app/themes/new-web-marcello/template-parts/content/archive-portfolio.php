@@ -3,11 +3,11 @@
 $new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
 $no_posts_text_1 = $new_web_marcello_theme_options['no_posts_text_1'];
 ?>
-<div class="container-xl category-wrapper">
+<div class="container-fluid portfolio-category-wrapper">
 
 	<?php if ( have_posts() ) : ?>
 
-		<div class="row mt-5">
+		<div class="card-columns my-5 portfolio-columns">
 
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
@@ -18,7 +18,7 @@ $no_posts_text_1 = $new_web_marcello_theme_options['no_posts_text_1'];
 
 		</div>
 
-		<?php the_posts_pagination( 
+		<!-- <?php the_posts_pagination( 
 					array( 
 						'screen_reader_text' => ' ', 
 						'mid_size' => 2,
@@ -26,7 +26,7 @@ $no_posts_text_1 = $new_web_marcello_theme_options['no_posts_text_1'];
 						'next_text' => '&#x300b'
 					) 
 				);
-		?>
+		?> -->
 		
 	<?php else : ?>
 		<p><?= esc_attr($no_posts_text_1) ?></p>
