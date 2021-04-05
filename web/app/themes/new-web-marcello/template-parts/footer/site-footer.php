@@ -16,13 +16,13 @@ $mid_square_background = file_get_contents( get_template_directory() . "/dist/im
                <?php dynamic_sidebar( 'footer_area_two' ); ?>
             </div>
             <div class="row">
-               <div class="col-md-4">
+               <div class="col-md-4 mb-3">
                   <?php dynamic_sidebar( 'footer_area_three' ); ?>
                </div>
-               <div class="col-md-4">
+               <div class="col-md-4 mb-3">
                   <?php dynamic_sidebar( 'footer_area_four' ); ?>
                </div>
-               <div class="col-md-4">
+               <div class="col-md-4 mb-3">
                   <?php dynamic_sidebar( 'footer_area_five' ); ?>
                </div>
             </div>
