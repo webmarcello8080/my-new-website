@@ -17,6 +17,7 @@ class Portfolio {
 
    public function __construct() {
 		add_action( 'init', array( $this,'custom_post_type'), 0 );
+		add_action( 'init', array( $this,'create_topics_taxonomy'), 0 );
 
 		$this->config = json_decode( $this->config, true );
 		$this->process_cpts();
@@ -63,7 +64,7 @@ class Portfolio {
          'description'           => __( 'What I have been working on', 'new_web_marcello' ),
          'labels'                => $labels,
          'supports'              => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
-         'taxonomies'            => array( 'category', 'post_tag' ),
+         // 'taxonomies'            => array( 'category', 'post_tag' ),
          'hierarchical'          => false,
          'public'                => true,
          'show_ui'               => true,
@@ -81,6 +82,42 @@ class Portfolio {
       register_post_type( 'portfolio', $args );
 
    }
+
+
+	function create_topics_taxonomy() {
+		// Labels part for the GUI
+		
+		$labels = array(
+			'name' => _x( 'Topics', 'new_web_marcello' ),
+			'singular_name' => _x( 'Topic', 'new_web_marcello' ),
+			'search_items' =>  __( 'Search Topics' ),
+			'popular_items' => __( 'Popular Topics' ),
+			'all_items' => __( 'All Topics' ),
+			'parent_item' => null,
+			'parent_item_colon' => null,
+			'edit_item' => __( 'Edit Topic' ), 
+			'update_item' => __( 'Update Topic' ),
+			'add_new_item' => __( 'Add New Topic' ),
+			'new_item_name' => __( 'New Topic Name' ),
+			'separate_items_with_commas' => __( 'Separate topics with commas' ),
+			'add_or_remove_items' => __( 'Add or remove topics' ),
+			'choose_from_most_used' => __( 'Choose from the most used topics' ),
+			'menu_name' => __( 'Topics' ),
+		); 
+		
+		// Now register the non-hierarchical taxonomy like tag
+		
+		register_taxonomy('topics','portfolio',array(
+			'hierarchical' => false,
+			'labels' => $labels,
+			'show_ui' => true,
+			'show_in_rest' => true,
+			'show_admin_column' => true,
+			'update_count_callback' => '_update_post_term_count',
+			'query_var' => true,
+			'rewrite' => array( 'slug' => 'topic' ),
+		));
+	}
 
 	public function process_cpts() {
 		if ( !empty( $this->config['cpt'] ) ) {

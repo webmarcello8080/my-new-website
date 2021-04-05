@@ -4,7 +4,7 @@ $new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_nam
 $no_posts_text_1 = $new_web_marcello_theme_options['no_posts_text_1'];
 ?>
 <div class="container-xl category-wrapper">
-	portfolio
+
 	<?php if ( have_posts() ) : ?>
 
 		<div class="row mt-5">

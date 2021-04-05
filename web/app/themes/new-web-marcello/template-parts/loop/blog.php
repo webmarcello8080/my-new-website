@@ -8,7 +8,7 @@ $read_more_7 = $new_web_marcello_theme_options['read_more_7'];
    <div class="card border-0 rounded-lg my-3 text-left single-blog">
       <?php if(has_post_thumbnail()): ?>
          <div class="card-img-top px-3 pt-3 pb-0 blog-img">
-            <a href="<?php the_permalink() ?>" ><?php the_post_thumbnail( 'large', ['class' => 'img-fluid rounded'] ); ?></a>
+            <a href="<?php the_permalink() ?>" ><?php the_post_thumbnail( 'medium', ['class' => 'img-fluid rounded'] ); ?></a>
          </div>
       <?php endif; ?>
       <div class="card-body blog-header">

@@ -132,6 +132,14 @@ class Menu {
 		);
 
 		add_settings_field(
+			'read_more_7', // id
+			'Read More Text', // title
+			array( $this, 'read_more_7_callback' ), // callback
+			'new-web-marcello-theme-admin', // page
+			'new_web_marcello_blog_section' // section
+		);
+
+		add_settings_field(
 			'comment_form_title_6', // id
 			'Comment Form Title', // title
 			array( $this, 'comment_form_title_6_callback' ), // callback
@@ -139,13 +147,6 @@ class Menu {
 			'new_web_marcello_blog_section' // section
 		);
 
-		add_settings_field(
-			'read_more_7', // id
-			'Read More Text', // title
-			array( $this, 'read_more_7_callback' ), // callback
-			'new-web-marcello-theme-admin', // page
-			'new_web_marcello_blog_section' // section
-		);
 	}
 
 	public function new_web_marcello_theme_sanitize($input) {
