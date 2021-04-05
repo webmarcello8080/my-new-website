@@ -37,4 +37,11 @@ class Header{
 
       return $page_title;
    }
+
+   public function category_page_title(){
+      if(single_cat_title()){
+         return single_cat_title();
+      } 
+      return post_type_archive_title();
+   }
 }

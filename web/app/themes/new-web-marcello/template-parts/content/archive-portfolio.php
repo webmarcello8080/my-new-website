@@ -11,7 +11,7 @@ $no_posts_text_1 = $new_web_marcello_theme_options['no_posts_text_1'];
 
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
-				<?php get_template_part( 'template-parts/loop/blog' ); ?>
+				<?php get_template_part( 'template-parts/loop/portfolio' ); ?>
 			<?php endwhile; ?>
 
 			<?php wp_reset_postdata(); ?>
