@@ -113,7 +113,7 @@ if ( !class_exists( 'WpPhoneMessageModel' ) ) {
         public function setStyleData($args){
             $css = '';
             $style = '';
-
+            
             if ( wp_phone_message_wpm_fs()->is__premium_only() ) {
                 $css = $args['wp-phone-message-css'];
                 $style = sanitize_text_field( $args['wp-phone-message-style'] );
