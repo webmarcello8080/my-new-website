@@ -29,13 +29,14 @@
                padding-inline-start: 0;
                .menu-item{
                   margin-bottom: $spacer * 0.5;
-                  a{
-                     color: $white;
-                  }
+
                }
             }
             .footer-area-title{
                color: $light;
+            }
+            a{
+               color: $white;
             }
          }
       }
