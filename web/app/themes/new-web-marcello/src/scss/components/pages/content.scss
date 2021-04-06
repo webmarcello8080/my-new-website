@@ -104,6 +104,10 @@
                   .carousel-item{
                      height: 700px;
                      transition: transform 1s ease-in-out;
+                     @include media-breakpoint-down(md) {
+                        height: 450px;
+                     }
+
                      .portfolio-carousel-img{
                         height: 100%;
                         width: auto;
