@@ -19,10 +19,12 @@ $standard_button_text_0 = $new_web_marcello_theme_options['standard_button_text_
   <div class="container-xl py-5 skills-wrapper">
     <div class="row py-5 align-items-center">
       <div class="col-lg-4 skills-body">
-         <h6><?php block_field('top-title'); ?></h6>
-         <h2><?php block_field('block-title'); ?></h2>
-         <p class="lead"><?php block_field('block-body'); ?></p>
-         <p><a href="<?php block_field('button-url'); ?>" class="btn btn-primary"><?= esc_attr($standard_button_text_0) ?></a></p>
+        <h6><?php block_field('top-title'); ?></h6>
+        <h2><?php block_field('block-title'); ?></h2>
+        <p class="lead"><?php block_field('block-body'); ?></p>
+        <?php if(block_value('button-url')): ?>
+          <p><a href="<?php block_field('button-url'); ?>" class="btn btn-primary"><?= esc_attr($standard_button_text_0) ?></a></p>
+        <?php endif; ?>
       </div>
       <div class="col-lg-8 skills-img-wrapper" style="background-image:url(<?= $world_map_background ?>)">
         <div class="php-logo"><?= $php_logo ?></div>

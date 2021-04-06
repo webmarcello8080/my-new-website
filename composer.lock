@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "27118ad733314d56a7c3bd36b49ff425",
+    "content-hash": "e0a2207e926a5e5de9a98157de773725",
     "packages": [
         {
             "name": "composer/installers",
@@ -1027,6 +1027,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/genesis-custom-blocks/"
+        },
+        {
+            "name": "wpackagist-plugin/qubely",
+            "version": "1.6.8",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/qubely/",
+                "reference": "tags/1.6.8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/qubely.1.6.8.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/qubely/"
         }
     ],
     "packages-dev": [
