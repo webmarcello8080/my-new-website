@@ -27,8 +27,10 @@ wp-cli.local.yml
 
 # Marcello Stuff
 !web/app/plugins/wp-phone-message-premium
-
 web/app/themes/new-web-marcello/node_modules
+web/app/themes/new-web-marcello/*.json
+web/app/themes/new-web-marcello/*.js
+web/app/themes/new-web-marcello/.babelrc
 #web/app/themes/new-web-marcello/dist
 
 debug.log
