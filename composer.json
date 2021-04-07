@@ -39,7 +39,6 @@
     "roots/wordpress": "5.6",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "wpackagist-plugin/crayon-syntax-highlighter": "^2.8",
     "wpackagist-plugin/genesis-custom-blocks": "^1.1",
     "wpackagist-plugin/contact-form-7": "^5.4",
     "wpackagist-plugin/qubely": "^1.6"

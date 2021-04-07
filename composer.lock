@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e0a2207e926a5e5de9a98157de773725",
+    "content-hash": "babcdb2f36d47a020452ad5cd67225ae",
     "packages": [
         {
             "name": "composer/installers",
@@ -991,24 +991,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/contact-form-7/"
-        },
-        {
-            "name": "wpackagist-plugin/crayon-syntax-highlighter",
-            "version": "2.8.4",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/crayon-syntax-highlighter/",
-                "reference": "trunk"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/crayon-syntax-highlighter.zip?timestamp=1462880237"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/crayon-syntax-highlighter/"
         },
         {
             "name": "wpackagist-plugin/genesis-custom-blocks",
