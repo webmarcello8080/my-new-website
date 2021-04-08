@@ -5,7 +5,7 @@ jQuery(function ($) {
          container: '#masonry-wrapper',
          trueOrder: false,
          waitForImages: false,
-         margin: 24,
+         margin: 0,
          columns: 3,
          breakAt: {
             768: 1

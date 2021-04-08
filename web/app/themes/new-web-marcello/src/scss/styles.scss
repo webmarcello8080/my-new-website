@@ -1,6 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Poppins);
 @import './theme/theme_variables.scss';
 @import 'node_modules/bootstrap/scss/bootstrap';
+@import 'node_modules/highlight.js/scss/default';
 @import './theme/theme_typography.scss';
 @import './theme/theme_width.scss';
 
@@ -16,6 +17,7 @@
 @import './components/blocks/service-block.scss';
 @import './components/blocks/skills-block.scss';
 @import './components/blocks/blog-block.scss';
+@import './components/blocks/skill-bars-block.scss';
 @import './components/footer/footer.scss';
 @import './components/footer/copyright.scss';
 @import './components/animations.scss';

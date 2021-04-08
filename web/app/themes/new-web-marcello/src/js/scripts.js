@@ -5,3 +5,5 @@ import './components/comments';
 import './components/time-zone';
 import './components/scroll-indicator';
 import './components/masonry';
+import './components/highlight';
+import './components/skill-bras';

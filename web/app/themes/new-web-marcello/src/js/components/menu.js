@@ -1,6 +1,6 @@
 jQuery(function ($) {
 
-   $('#menu-toggle').click(function () {
+   $('#menu-toggle').on('click', function () {
 
       if ($(this).hasClass('open')) {
          $('#full-screen').animate({ left: "-100%" }, 1000);
@@ -13,10 +13,10 @@ jQuery(function ($) {
       $(this).toggleClass('open');
    });
 
-   $('.sub-menu').click(function (event) {
+   $('.sub-menu').on('click', function (event) {
       event.stopPropagation();
    })
-   $('.menu-item-has-children').click(function (event) {
+   $('.menu-item-has-children').on('click', function (event) {
       event.preventDefault();
       $(this).find('.sub-menu').slideToggle();
       $(this).find(':before').css({ 'transform': 'rotate(45deg)' });

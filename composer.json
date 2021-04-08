@@ -40,8 +40,7 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/genesis-custom-blocks": "^1.1",
-    "wpackagist-plugin/contact-form-7": "^5.4",
-    "wpackagist-plugin/qubely": "^1.6"
+    "wpackagist-plugin/contact-form-7": "^5.4"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",

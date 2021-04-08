@@ -1,7 +1,7 @@
 <?php
 $categories = new \NewWebMarcello\frontend\Categories;
 ?>
-<div class="card mb-4 single-portfolio">
+<div class="card single-portfolio">
    <?php if(has_post_thumbnail()): ?>
       <a href="<?php the_permalink() ?>" >
          <div class="card-img-top portfolio-img">

@@ -22,7 +22,7 @@ $portfolio_image_4 = get_post_meta( get_the_ID(), 'portfolio_fields_image-4', tr
 				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
 					<div class="carousel-inner text-center">
 						<?php if( $portfolio_image_1 ) : ?>
-							<div class="carousel-item active">
+							<div id="img-container" class="carousel-item active">
 								<?php $images->get_image_by_url($portfolio_image_1 , 'large', 'portfolio-carousel-img'); ?>
 							</div>
 						<?php endif; ?>
