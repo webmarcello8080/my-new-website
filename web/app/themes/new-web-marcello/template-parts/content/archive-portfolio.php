@@ -3,7 +3,7 @@
 $new_web_marcello_theme_options = get_option( 'new_web_marcello_theme_option_name' );
 $no_posts_text_1 = $new_web_marcello_theme_options['no_posts_text_1'];
 ?>
-<div class="container-xl portfolio-category-wrapper">
+<div class="portfolio-category-wrapper">
 
 	<?php if ( have_posts() ) : ?>
 
