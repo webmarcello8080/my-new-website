@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c68b0b18e4c8093431cfe132ad929d6b",
+    "content-hash": "fa63d4d67eccf2801836d2c11acbd753",
     "packages": [
         {
             "name": "composer/installers",
@@ -975,22 +975,22 @@
             "time": "2021-01-20T15:23:13+00:00"
         },
         {
-            "name": "wpackagist-plugin/contact-form-7",
-            "version": "5.4",
+            "name": "wpackagist-plugin/caldera-forms",
+            "version": "1.9.4",
             "source": {
                 "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/contact-form-7/",
-                "reference": "tags/5.4"
+                "url": "https://plugins.svn.wordpress.org/caldera-forms/",
+                "reference": "tags/1.9.4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/contact-form-7.5.4.zip"
+                "url": "https://downloads.wordpress.org/plugin/caldera-forms.1.9.4.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
             },
             "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/contact-form-7/"
+            "homepage": "https://wordpress.org/plugins/caldera-forms/"
         },
         {
             "name": "wpackagist-plugin/genesis-custom-blocks",
