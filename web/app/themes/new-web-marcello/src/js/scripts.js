@@ -7,3 +7,4 @@ import './components/scroll-indicator';
 import './components/masonry';
 import './components/highlight';
 import './components/skill-bras';
+import './components/open-image-click';
