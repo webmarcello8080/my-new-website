@@ -1,5 +1,11 @@
 .hero-block{
 
+   .hero-block-img{
+      @include media-breakpoint-down(md) {
+         display: none;
+      }
+   }
+
    .hero-background-image {
       position: absolute;
       top: 0;

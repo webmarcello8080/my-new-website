@@ -18,7 +18,13 @@ class Images {
       $attachment_id = $this->get_image_id($image_url);
       
       if( $attachment_id ){
-         $image_attributes = wp_get_attachment_image_src( $attachment_id, $size );
+         $this->get_image_by_id($attachment_id, $size, $classes );
+      }
+   }
+
+   public function get_image_by_id($image_id, $size = 'thumbnail', $classes = ''){
+      if( $image_id ){
+         $image_attributes = wp_get_attachment_image_src( $image_id, $size );
          if ( $image_attributes ) { ?>
             <img class="<?= $classes ?>" src="<?= $image_attributes[0]; ?>" width="<?= $image_attributes[1]; ?>" height="<?= $image_attributes[2]; ?>" />
          <?php 
