@@ -7,7 +7,7 @@ $no_posts_text_1 = $new_web_marcello_theme_options['no_posts_text_1'];
 
 	<?php if ( have_posts() ) : ?>
 
-		<div id="masonry-wrapper" class="my-5 portfolio-columns">
+		<div id="masonry-wrapper" class="row my-5 portfolio-columns">
 
 			<?php while ( have_posts() ) : ?>
 				<?php the_post(); ?>
