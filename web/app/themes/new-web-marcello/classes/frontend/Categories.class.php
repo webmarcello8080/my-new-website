@@ -44,4 +44,26 @@ class Categories{
 
       return $categories;
    }
+
+   public function getAllCategoryLink($category, $classes, $spacer = ''){
+      $args = array(
+                  'taxonomy' => $category,
+                  'orderby' => 'name',
+                  'order'   => 'ASC'
+            );
+
+      $categories = get_categories($args);
+
+      if($categories){
+         foreach( $categories as $category) {
+            
+            $name = $category->name;
+            $category_link = get_category_link( $category->term_id );
+            echo '<a class="' . $classes . '" href="' . $category_link . '">' . esc_attr($name) . '</a>';
+            if (next($categories)==true){
+               echo $spacer;
+            }
+         }
+      }
+   }
 }
