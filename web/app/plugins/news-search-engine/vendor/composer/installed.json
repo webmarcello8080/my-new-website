@@ -1,0 +1,53 @@
+[
+    {
+        "name": "murat-yuksel/news-api-php",
+        "version": "v1.0",
+        "version_normalized": "1.0.0.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/murat-yuksel/news-api-php.git",
+            "reference": "21339d9c7b9a8b765823532851965c2310df5883"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/murat-yuksel/news-api-php/zipball/21339d9c7b9a8b765823532851965c2310df5883",
+            "reference": "21339d9c7b9a8b765823532851965c2310df5883",
+            "shasum": ""
+        },
+        "require": {
+            "php": "^7.0"
+        },
+        "require-dev": {
+            "guzzlehttp/guzzle": "^6.3",
+            "phpunit/phpunit": "~4.0|~5.0",
+            "vlucas/phpdotenv": "^2.5"
+        },
+        "time": "2018-08-11T22:42:39+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "NewsApi\\": "src/NewsApi/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Murat Yüksel",
+                "email": "murat@muratyuksel.net",
+                "homepage": "https://muratyuksel.net"
+            }
+        ],
+        "description": "PHP Client for Google News API",
+        "homepage": "https://muratyuksel.net",
+        "keywords": [
+            "api",
+            "client",
+            "google",
+            "news"
+        ]
+    }
+]
