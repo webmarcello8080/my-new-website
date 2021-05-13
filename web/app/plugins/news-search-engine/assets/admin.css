@@ -79,9 +79,6 @@
 .news-search-engine-content table.fixed {
     table-layout: fixed;
 }
-.news-search-engine-content table .column-source button{
-    display: none;
-}
 .news-search-engine-content table .column-url a{
     color: #00a0d3;
 }

@@ -162,8 +162,10 @@ $svg_spinner = file_get_contents(PLUGIN_NSE_URL . 'img/spinner.svg');
 
         <?php
             wp_nonce_field( 'news-search-engine-settings-save', 'news-search-engine-form-message' );
-            submit_button('Search News');
         ?>
+        <p class="submit">
+            <input type="submit" name="submit" id="submit" class="button button-primary btn btn-primary" value="Search News">
+        </p>
     </form>
 <?php
 
@@ -171,12 +173,12 @@ $svg_spinner = file_get_contents(PLUGIN_NSE_URL . 'img/spinner.svg');
 if($_POST){
     // create classes
     $request = new NewsSearchEngineRequest;
-    $response = @new NewsSearchEngineResponse;
+    $response = new NewsSearchEngineResponse;
 
     $result = $request->selectRequest($_POST);
 
     // render output
     if($response->renderResponse($result)){
-        $response->display_table();
+        $response->display();
     }
 }

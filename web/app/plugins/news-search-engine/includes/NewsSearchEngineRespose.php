@@ -1,46 +1,48 @@
 <?php
 
-//Our class extends the WP_List_Table class, so we need to make sure that it's there
-if(!class_exists('WP_List_Table')){
-   require_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
-}
-
 if ( !class_exists( 'NewsSearchEngineResponse' ) ) {
 
-    class NewsSearchEngineResponse extends WP_List_Table {
+    class NewsSearchEngineResponse {
 
         private $columns;
-        private $APIData;
+        private $rows;
         private $totalRow;
         private $pagination;
+        private $error;
+
+        public function __construct(){
+            $this->error = new NewsSearchEngineError;
+        }
 
         // write the response and route the response to part of the class
         public function renderResponse($response){
 
             if($response->status == 'ok'){
-                if($response->totalResults){
-                    if(isset($response->sources) && $response->sources ){
-                        $this->prepareTable($response->sources);
-                        $this->totalRow = count($response->sources);
-                        $this->pagination = false;
-                    }
-                    elseif(isset($response->articles) && $response->articles){
+                if(isset($response->sources) && $response->sources ){
+                    $this->prepareTable($response->sources);
+                    $this->totalRow = count($response->sources);
+                    $this->pagination = false;
+
+                    return true;
+                }
+                if(isset($response->totalResults) && $response->totalResults){
+                    if(isset($response->articles) && $response->articles){
                         $this->prepareTable($response->articles);
                         $this->totalRow = $response->totalResults;
                         $this->pagination = true;
                     }
                     return true;
                 } else {
-                    $this->emptyResponse();
+                    $this->error->emptyResponse();
                     return false;
                 }
             }
             if($response->status == 'error'){
-                $this->renderError($response);
+                $this->error->renderError($response);
                 return false;
             }
             if(!$response->status){
-                $this->misteryError($response);
+                $this->error->misteryError($response);
                 return false;
             }
         }
@@ -51,40 +53,8 @@ if ( !class_exists( 'NewsSearchEngineResponse' ) ) {
             foreach($response as $singleResult){
                 $APIData[] = (array)$singleResult;
             }
-            $this->APIData = $APIData;
+            $this->rows = $APIData;
             $this->columns = $this->createColumns($APIData[0]);
-        }
-
-        // display API error
-        private function renderError($response){
-            $errorMessage = 'The API returned an error:<br/><b>Code </b>' . $response->code . '<br/><b>' . $response->message . '</b>';
-            echo '<div class="form-messages">' . $errorMessage . '</div>';
-            return true;
-        }
-
-        // display API error if it doesn't have any error message
-        private function misteryError($response){
-            $errorMessage = 'The API returned an unknow error:<br/>Please be sure to set page and pagesize.<br/>Be sure to select the right protocol HTTP or HTTPS<br/><b>' . $response->message . '</b>';
-            echo '<div class="form-messages">' . $errorMessage . '</div>';
-            return true;
-        }
-
-        // display error if we have an empty reponse from the API
-        private function emptyResponse(){
-            echo '<div class="form-messages">No result found</div>';
-            return true;
-        }
-
-        // create to header of the result table
-        public function prepare_items(){
-            
-            $columns = $this->get_columns();
-            
-            $hidden = array();
-            $sortable = array();
-            $this->_column_headers = array($columns, $hidden, $sortable);
-
-            $this->items = $this->APIData;
         }
 
         // create columns of the result table
@@ -99,7 +69,7 @@ if ( !class_exists( 'NewsSearchEngineResponse' ) ) {
         }
 
         // display the actual table, wrap the table with pagination and result data
-        public function display_table(){
+        public function display(){
             echo '<div id="table-result-wrap">';
 
             if($this->totalRow && $this->pagination){
@@ -110,8 +80,7 @@ if ( !class_exists( 'NewsSearchEngineResponse' ) ) {
                 echo '<h3>Total Resutls ' . $this->totalRow . ' - Total Pages 1 </h3>';            
             }
 
-            $this->prepare_items(); 
-            $this->display();
+            $this->display_table();
 
             if($this->totalRow  && $this->pagination){
                 $this->display_pagination();
@@ -119,8 +88,47 @@ if ( !class_exists( 'NewsSearchEngineResponse' ) ) {
             echo '</div>'; 
         }
 
+        // render actual table
+        private function display_table(){
+            ?>
+                <table class="wp-list-table widefat fixed striped">
+                    <?php if ($this->columns): ?>
+                        <?php $this->display_table_header('head');?>
+                    <?php endif; ?>
+                    <?php if ($this->rows): ?>
+                        <tbody id="the-list">
+                            <?php foreach($this->rows as $row) : ?>
+                                <tr>
+                                    <?php foreach($row as $key => $value) : ?>
+                                        <td data-colname="<?= $key ?>" class="column-<?= strtolower($key) ?>" >
+                                            <?= $this->column_default( $value, $key ) ?>
+                                        </td>
+                                    <?php endforeach; ?>
+                                </tr>
+                            <?php endforeach; ?>                            
+                        </tbody>
+                    <?php endif; ?>
+                    <?php if ($this->columns): ?>
+                        <?php $this->display_table_header('foot');?>
+                    <?php endif; ?>
+                </table>
+            <?php
+        }
+
+        private function display_table_header($part){
+            ?>
+                <t<?= $part ?>>
+                    <tr>
+                        <?php foreach($this->columns as $column) : ?>
+                            <th scope="col" class="column-<?= strtolower($column) ?>"><?= $column ?></th>
+                        <?php endforeach; ?>
+                    </tr>
+                </t<?= $part ?>>
+            <?php
+        }
+
         // format the column values
-        protected  function column_default( $item, $column_name ) {
+        protected function column_default( $item, $column_name ) {
             switch( $column_name ) { 
                 case 'id':
                 case 'name':
@@ -128,18 +136,18 @@ if ( !class_exists( 'NewsSearchEngineResponse' ) ) {
                 case 'language':
                 case 'country':
                 case 'author':
-                    return $item[ $column_name ];
+                    return $item;
                 case 'description':
                 case 'title':
-                    return $this->limit_text( $item[ $column_name ] );
+                    return $this->limit_text( $item );
                 case 'source':
-                    return $item[ $column_name ]->name;
+                    return $item->name;
                 case 'url':
-                    return '<a href="' . $item[ $column_name ] . '" target="_blank">' . $this->limit_text( $item[ $column_name ] ) . '</a>';
+                    return '<a href="' . $item . '" target="_blank">' . $this->limit_text( $item ) . '</a>';
                 case 'urlToImage':
-                    return '<a href="' . $item[ $column_name ] . '" target="_blank"><img width="100%" src="' . $item[ $column_name ] . '" /></a>';
+                    return '<a href="' . $item . '" target="_blank"><img width="100%" src="' . $item . '" /></a>';
                 case 'publishedAt':
-                    return date("Y-m-d H:i:s", strtotime($item[ $column_name ]));
+                    return date( get_option('date_format') . " " . get_option('time_format'), strtotime($item) );
                 default:
                     return print_r( $item, true ) ; //Show the whole array for troubleshooting purposes
             }
@@ -158,20 +166,6 @@ if ( !class_exists( 'NewsSearchEngineResponse' ) ) {
                 $result = substr( $text, 0, $limit) . ' [...]';
                 return $result;
             }
-        }
-
-        // sort columns - not in use
-        public function get_sortable_columns() {
-            $sortable_columns = array(
-                'category'  => array('category',false),
-                'name' => array('name',false)
-            );
-            return $sortable_columns;
-        }
-
-        // return columns, this function is mandatory for the WP_List_Table
-        public function get_columns(){
-            return $this->columns;
         }
 
         // disply pagination
