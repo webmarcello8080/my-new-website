@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa63d4d67eccf2801836d2c11acbd753",
+    "content-hash": "c1b676ab8a47fce1d390a86f9cf8ee01",
     "packages": [
         {
             "name": "composer/installers",
@@ -1009,6 +1009,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/genesis-custom-blocks/"
+        },
+        {
+            "name": "wpackagist-plugin/xml-sitemaps",
+            "version": "3.0.1",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/xml-sitemaps/",
+                "reference": "tags/3.0.1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/xml-sitemaps.3.0.1.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/xml-sitemaps/"
         }
     ],
     "packages-dev": [
