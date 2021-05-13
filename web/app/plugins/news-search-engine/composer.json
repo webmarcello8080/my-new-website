@@ -1,0 +1,5 @@
+{
+    "require": {
+        "murat-yuksel/news-api-php": "^1.0"
+    }
+}

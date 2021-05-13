@@ -1,0 +1,67 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "d7e3af216bd0fd97fad3e4189e1f612a",
+    "packages": [
+        {
+            "name": "murat-yuksel/news-api-php",
+            "version": "v1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/murat-yuksel/news-api-php.git",
+                "reference": "21339d9c7b9a8b765823532851965c2310df5883"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/murat-yuksel/news-api-php/zipball/21339d9c7b9a8b765823532851965c2310df5883",
+                "reference": "21339d9c7b9a8b765823532851965c2310df5883",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^6.3",
+                "phpunit/phpunit": "~4.0|~5.0",
+                "vlucas/phpdotenv": "^2.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "NewsApi\\": "src/NewsApi/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Murat Yüksel",
+                    "email": "murat@muratyuksel.net",
+                    "homepage": "https://muratyuksel.net"
+                }
+            ],
+            "description": "PHP Client for Google News API",
+            "homepage": "https://muratyuksel.net",
+            "keywords": [
+                "api",
+                "client",
+                "google",
+                "news"
+            ],
+            "time": "2018-08-11T22:42:39+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}

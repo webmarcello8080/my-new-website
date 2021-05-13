@@ -1,0 +1,87 @@
+/* FORM */
+#news-search-table .news-search-engine-type lable {
+    float: left;
+    width: 30%;
+}
+
+#news-search-table .description {
+    margin-top: 0 !important;
+    margin-right: 5px;
+    font-size: 12px;
+}
+#news-search-table th {
+    width: 175px;
+    padding: 9px 10px !important;
+}
+#news-search-table td {
+    padding: 5px !important;
+    position: relative;
+}
+#news-search-table input[type="text"], #news-search-table select, #news-search-table input[type="date"], #news-search-table input[type="number"]{
+    border-radius: 15px;
+    height: 25px;
+    padding: 0 15px;
+    font-size: 13px !important;
+    width: 100%;
+    max-width: 200px;
+}
+.news-search-engine-source-loader, .news-search-engine-domains-loader {
+    display: none;
+    position: absolute;
+    left: 210px;
+    top: 0;
+}
+
+/* PAGINATION */
+#table-result-wrap .table-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    list-style-type: none;
+}
+#table-result-wrap .table-pagination li {
+    margin: 0 10px;
+}
+#table-result-wrap .select-page {
+    text-decoration: underline;
+    color: #00a0d3;
+    cursor: pointer;
+}
+#table-result-wrap .select-page-disable {
+    text-decoration: none;
+    color: gray;
+}
+#table-result-wrap .tablenav {
+    display: none;
+}
+
+/* AJAX PART */
+#news-search-table .news-search-sources-list {
+    position: absolute;
+    background: white;
+    width: 200px;
+    height: auto;
+    max-height: 200px;
+    top: -15px;
+    overflow: auto;
+}
+#news-search-table #source-suggesstion-box, #news-search-table #domain-suggesstion-box {
+    position: relative;
+}
+#news-search-table .news-search-sources-result {
+    font-size: 13px;
+    padding: 0 0 0 10px;
+    border-bottom: solid 1px #f1f1f1;
+    cursor: pointer;
+}
+
+/* Table in frontend */
+.news-search-engine-content table.fixed {
+    table-layout: fixed;
+}
+.news-search-engine-content table .column-source button{
+    display: none;
+}
+.news-search-engine-content table .column-url a{
+    color: #00a0d3;
+}
