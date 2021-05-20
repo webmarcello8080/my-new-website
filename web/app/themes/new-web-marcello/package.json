@@ -1,0 +1,38 @@
+{
+  "name": "new_web_marcello",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --prod"
+  },
+  "author": "Marcello Perri",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/register": "^7.12.13",
+    "autoprefixer": "^10.2.4",
+    "babel-loader": "^8.2.2",
+    "browser-sync": "^2.26.14",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-postcss": "^9.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^6.1.2",
+    "yargs": "^16.2.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.6.0",
+    "highlight.js": "^10.7.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1",
+    "postcss": "^8.2.5"
+  }
+}

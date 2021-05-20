@@ -124,3 +124,11 @@
       }
    }
 }
+.first-letter:first-letter{
+   color: $primary;
+   margin: -0.25rem .3rem 0 .3rem;
+   font-size: 3 * $font-size-base;
+   float: left;
+   line-height: 1;
+   text-shadow: -1px 2px 0 $body-bg, -4px 4px 0 $body-color;
+}

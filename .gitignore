@@ -29,8 +29,6 @@ wp-cli.local.yml
 !web/app/plugins/wp-phone-message-premium
 !web/app/plugins/news-search-engine
 web/app/themes/new-web-marcello/node_modules
-web/app/themes/new-web-marcello/*.json
-web/app/themes/new-web-marcello/*.js
 web/app/themes/new-web-marcello/.babelrc
 #web/app/themes/new-web-marcello/dist
 
