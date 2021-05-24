@@ -1,0 +1,6 @@
+[submodule "web/app/plugins/news-search-engine"]
+	path = web/app/plugins/news-search-engine
+	url = https://github.com/webmarcello8080/news-search-engine.git
+[submodule "web/app/plugins/wp-phone-message"]
+	path = web/app/plugins/wp-phone-message
+	url = https://github.com/webmarcello8080/wp-phone-message.git
