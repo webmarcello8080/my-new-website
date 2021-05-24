@@ -26,7 +26,7 @@ vendor/*
 wp-cli.local.yml
 
 # Marcello Stuff
-!web/app/plugins/wp-phone-message-premium
+!web/app/plugins/wp-phone-message
 !web/app/plugins/news-search-engine
 web/app/themes/new-web-marcello/node_modules
 web/app/themes/new-web-marcello/.babelrc
