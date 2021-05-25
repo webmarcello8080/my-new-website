@@ -7,7 +7,7 @@ $container-max-widths: (
     max-width: $container;
   }
 }
-.news-search-engine-content, .entry-content {
+.entry-content {
    & > *{
       &:not(.alignwide):not(.alignfull):not(.alignleft):not(.alignright):not(.wp-block-separator):not(.woocommerce):not(.hero-block):not(.service-block):not(.skills-block):not(.blog-block){
          max-width: $container;

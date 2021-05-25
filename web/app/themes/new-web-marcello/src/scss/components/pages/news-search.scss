@@ -1,0 +1,27 @@
+.news-search-engine-content{
+   margin-top: $spacer * 3;
+   margin-bottom: $spacer * 3;
+   max-width: $container;
+   margin-left: auto;
+   margin-right: auto;
+   padding-left: $spacer;
+   padding-right: $spacer;
+
+   .admin-page-title{
+      display: none;
+   }
+
+   #news-search-form{
+      margin-bottom: $spacer * 3;
+   }
+   #table-result-wrap{
+      .table-pagination{
+         padding-left: 0 !important;
+         li{
+            &::before{
+               display: none;
+            }
+         }
+      }
+   }
+}
