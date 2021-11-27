@@ -4,3 +4,6 @@
 [submodule "web/app/plugins/wp-phone-message"]
 	path = web/app/plugins/wp-phone-message
 	url = https://github.com/webmarcello8080/wp-phone-message.git
+[submodule "web/app/plugins/fullscreen-any-element"]
+	path = web/app/plugins/fullscreen-any-element
+	url = https://github.com/webmarcello8080/fullscreen-any-element.git
