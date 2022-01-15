@@ -8,3 +8,4 @@ import './components/highlight';
 import './components/skill-bras';
 import './components/open-image-click';
 import './components/first-letter';
+import './components/read-more';
