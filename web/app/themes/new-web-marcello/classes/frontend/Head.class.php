@@ -32,7 +32,8 @@ class Head{
       }
 
       // include async on script
-      add_filter('script_loader_tag',  array( $this, 'add_async_attribute'), 10, 2);
+      add_filter('script_loader_tag',  array( $this, 'add_async_script'), 10, 2);
+      add_filter('style_loader_tag',  array( $this, 'add_async_style'), 10, 2);
    }
 
    public function load_assets(){
@@ -56,8 +57,19 @@ class Head{
    }
    
    // add script handles to the array below
-   public function add_async_attribute($tag, $handle) {
-      $scripts_to_async = array('new_web_marcello-scripts', 'new_web_marcello-stylesheet');
+   public function add_async_script($tag, $handle) {
+      $scripts_to_async = array('new_web_marcello-scripts');
+      
+      foreach($scripts_to_async as $async_script) {
+         if ($async_script === $handle) {
+            return str_replace(' src', ' async="async" src', $tag);
+         }
+      }
+      return $tag;
+   }
+   // add script handles to the array below
+   public function add_async_style($tag, $handle) {
+      $scripts_to_async = array('new_web_marcello-stylesheet');
       
       foreach($scripts_to_async as $async_script) {
          if ($async_script === $handle) {
