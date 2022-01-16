@@ -30,11 +30,15 @@ class Head{
       if(isset($args['link']) && $args['link']){
          add_action( 'wp_head', array( $this, 'load_link'));
       }
+
+      // include async on script
+      add_filter('clean_url',  array( $this, 'add_async_forscript'), 11, 1);
+
    }
 
    public function load_assets(){
       wp_enqueue_style( 'new_web_marcello-stylesheet', get_template_directory_uri() . '/dist/css/styles.css', array(), '1.0.0', 'all' );
-      wp_enqueue_script( 'new_web_marcello-scripts', get_template_directory_uri() . '/dist/js/scripts.js', array('jquery'), '1.0.0', true );
+      wp_enqueue_script( 'new_web_marcello-scripts', get_template_directory_uri() . '/dist/js/scripts.js#asyncload', array('jquery'), '1.0.0', true );
    }
 
    public function load_metatag(){
@@ -50,5 +54,15 @@ class Head{
       ?>
       <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
       <?php
+   }
+
+   public function add_async_forscript($url)
+   {
+      if (strpos($url, '#asyncload')===false)
+         return $url;
+      else if (is_admin())
+         return str_replace('#asyncload', '', $url);
+      else
+         return str_replace('#asyncload', '', $url)."' async='async"; 
    }
 }
