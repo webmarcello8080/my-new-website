@@ -32,7 +32,7 @@ class Head{
       }
 
       // include async on script
-      add_filter('script_loader_tag',  array( $this, 'add_async_attribute'), 11, 1);
+      add_filter('script_loader_tag',  array( $this, 'add_async_attribute'), 10, 2);
    }
 
    public function load_assets(){
