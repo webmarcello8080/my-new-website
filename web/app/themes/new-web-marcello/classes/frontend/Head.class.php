@@ -73,7 +73,7 @@ class Head{
       
       foreach($scripts_to_async as $async_script) {
          if ($async_script === $handle) {
-            return str_replace(' src', ' async="async" src', $tag);
+            return str_replace(' href', ' async="async" href', $tag);
          }
       }
       return $tag;
