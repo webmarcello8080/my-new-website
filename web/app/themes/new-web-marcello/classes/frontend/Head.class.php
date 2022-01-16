@@ -57,7 +57,7 @@ class Head{
    
    // add script handles to the array below
    public function add_async_attribute($tag, $handle) {
-      $scripts_to_async = array('new_web_marcello-scripts');
+      $scripts_to_async = array('new_web_marcello-scripts', 'new_web_marcello-stylesheet');
       
       foreach($scripts_to_async as $async_script) {
          if ($async_script === $handle) {
