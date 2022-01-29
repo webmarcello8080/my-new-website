@@ -14,3 +14,13 @@
    color: $primary;
    cursor: pointer;
 }
+.slide-read-more{
+    overflow:hidden;
+}
+.slide-read-more-button{
+    cursor: pointer;
+    text-align: right;
+    margin-top: 8px;
+    color: $primary;
+    display: none;
+}

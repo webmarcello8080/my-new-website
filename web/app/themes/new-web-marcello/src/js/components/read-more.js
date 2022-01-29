@@ -1,4 +1,37 @@
 jQuery(function ($) {
+   // resize the slide-read-more Div
+   var box = $(".slide-read-more");
+   var minimumHeight = 200;
+   var initialHeight = box.innerHeight();
+
+   if (initialHeight > minimumHeight) {
+      box.css('height', minimumHeight);
+      $(".slide-read-more-button").show();
+   }
+
+   AddReadMore();
+   SliderReadMore();
+
+   function SliderReadMore() {
+      $(".slide-read-more-button").on('click', function () {
+         // get current height
+         var currentHeight = box.innerHeight();
+
+         // get height with auto applied
+         var autoHeight = box.css('height', 'auto').innerHeight();
+
+         // reset height and revert to original if current and auto are equal
+         var newHeight = (currentHeight | 0) === (autoHeight | 0) ? minimumHeight : autoHeight;
+
+         box.css('height', currentHeight).animate({
+            height: (newHeight)
+         })
+         $('html, body').animate({
+            scrollTop: box.offset().top
+         });
+      });
+   }
+
    function AddReadMore() {
       //This limit you can set after how much characters you want to show Read More.
       var carLmt = 280;
@@ -27,6 +60,4 @@ jQuery(function ($) {
          $(this).closest(".add-read-more").toggleClass("show-less-content show-more-content");
       });
    }
-
-   AddReadMore();
 });
