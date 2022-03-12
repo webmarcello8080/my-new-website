@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a588619605dd145237f77a656f7207f8",
+    "content-hash": "fda69d44c0895bfca6435584705ed430",
     "packages": [
         {
             "name": "composer/installers",
@@ -1019,6 +1019,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/genesis-custom-blocks/"
+        },
+        {
+            "name": "wpackagist-plugin/site-reviews",
+            "version": "5.21.4",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/site-reviews/",
+                "reference": "tags/5.21.4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/site-reviews.5.21.4.zip"
+            },
+            "require": {
+                "composer/installers": "^1.0 || ^2.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/site-reviews/"
         },
         {
             "name": "wpackagist-plugin/xml-sitemaps",
