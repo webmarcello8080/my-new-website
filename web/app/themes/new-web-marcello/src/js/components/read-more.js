@@ -6,7 +6,7 @@ jQuery(function ($) {
    // reduce the text if it's longer than 200px
    if (initialHeight > minimumHeight) {
       box.css('height', minimumHeight);
-      $(".slide-read-more-button").show();
+      $(".read-more-button").show();
    }
 
    AddReadMore();
@@ -29,6 +29,7 @@ jQuery(function ($) {
          $('html, body').animate({
             scrollTop: box.offset().top
          });
+         $(".slide-read-more-button").toggle();
       });
    }
 
