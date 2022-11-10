@@ -126,7 +126,7 @@ article{
     list-style: none;
     margin-top: $spacer * 2;
     margin-bottom: $spacer * 2;
-    padding-left: $spacer * 3 !important;
+    padding-left: $spacer * 3;
     li{
       &:before {
         content: "\2022";

@@ -118,7 +118,7 @@ class Comment_Walker extends Walker_Comment {
 		<div id="div-comment-<?php comment_ID(); ?>" class="comment-body mb-4">
 		<?php endif; ?>
 		<div class="comment-author vcard">
-			<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'], '', get_comment_author_link( $comment ), array('class' => 'mr-3 rounded-circle') ); ?>
+			<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'], '', get_comment_author_link( $comment ), array('class' => 'mr-2 rounded-circle') ); ?>
 			<?php printf( __( '<cite class="h5 fn">%s</cite> <span class="h5 says">says:</span>' ), get_comment_author_link( $comment ) ); ?>
 		</div>
 		<?php if ( '0' == $comment->comment_approved ) : ?>
@@ -158,7 +158,7 @@ class Comment_Walker extends Walker_Comment {
 			<article id="div-comment-<?php comment_ID(); ?>" class="comment-body mb-4">
 				<footer class="comment-meta mb-2">
 					<div class="comment-author vcard">
-						<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'], '', get_comment_author_link( $comment ), array('class' => 'mr-3 rounded-circle') ); ?>
+						<?php if ( 0 != $args['avatar_size'] ) echo get_avatar( $comment, $args['avatar_size'], '', get_comment_author_link( $comment ), array('class' => 'mr-2 rounded-circle') ); ?>
 						<?php printf( __( '%s <span class="h5 says">says:</span>' ), sprintf( '<span class="h5 fn">~ %s</span>', get_comment_author_link( $comment ) ) ); ?>
 					</div><!-- .comment-author -->
 
