@@ -13,6 +13,11 @@ class Head{
          remove_action( 'admin_print_styles', 'print_emoji_styles' );
       }
 
+      // REMOVE WP EMOJI
+      if(isset($args['remove_global_style']) && $args['remove_global_style']){
+         add_action( 'wp_enqueue_scripts', [$this, 'remove_global_styles'] );
+      }
+
       // remove meta genarator
       if(isset($args['remove_wp_generator']) && $args['remove_wp_generator']){
          remove_action('wp_head', 'wp_generator');
@@ -34,6 +39,10 @@ class Head{
       // include async on script
       add_filter('script_loader_tag',  array( $this, 'add_async_script'), 10, 2);
       add_filter('style_loader_tag',  array( $this, 'add_async_style'), 10, 2);
+   }
+
+   public function remove_global_styles(){
+      wp_dequeue_style( 'global-styles' );
    }
 
    public function load_assets(){

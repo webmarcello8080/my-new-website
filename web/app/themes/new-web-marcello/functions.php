@@ -17,6 +17,7 @@ $args = [
     "link" => true,
     "remove_emoji" => true,
     "remove_wp_generator" => true,
+    "remove_global_style" => true,
 ];
 new \NewWebMarcello\frontend\Head($args);
 new \NewWebMarcello\frontend\Menu();
