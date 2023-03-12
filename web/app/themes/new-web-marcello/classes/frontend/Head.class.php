@@ -56,6 +56,7 @@ class Head{
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta charset="<?php bloginfo( 'charset' ); ?>" />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="description" content="<?= is_single() ? get_the_excerpt() : bloginfo('name'); echo " - "; bloginfo('description') ?>">
       <?php
    }
 
@@ -76,6 +77,7 @@ class Head{
       }
       return $tag;
    }
+
    // add script handles to the array below
    public function add_async_style($tag, $handle) {
       $scripts_to_async = array('new_web_marcello-stylesheet');
