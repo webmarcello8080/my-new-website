@@ -117,3 +117,6 @@ Keep track of development and community news.
 - GULP:
 watch: 'gulp watchForChanges'
 production: 'gulp build --prod=true'
+
+- Composer on server
+/usr/bin/php7.1-cli composer.phar update
