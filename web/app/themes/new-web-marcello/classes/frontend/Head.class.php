@@ -13,6 +13,11 @@ class Head{
          remove_action( 'admin_print_styles', 'print_emoji_styles' );
       }
 
+      // REMOVE WP EMOJI
+      if(isset($args['remove_global_style']) && $args['remove_global_style']){
+         add_action( 'wp_enqueue_scripts', [$this, 'remove_global_styles'] );
+      }
+
       // remove meta genarator
       if(isset($args['remove_wp_generator']) && $args['remove_wp_generator']){
          remove_action('wp_head', 'wp_generator');
@@ -36,6 +41,10 @@ class Head{
       add_filter('style_loader_tag',  array( $this, 'add_async_style'), 10, 2);
    }
 
+   public function remove_global_styles(){
+      wp_dequeue_style( 'global-styles' );
+   }
+
    public function load_assets(){
       wp_enqueue_style( 'new_web_marcello-stylesheet', get_template_directory_uri() . '/dist/css/styles.css', array(), '1.0.0', 'all' );
       wp_enqueue_script( 'new_web_marcello-scripts', get_template_directory_uri() . '/dist/js/scripts.js', array('jquery'), '1.0.0', true );
@@ -47,6 +56,7 @@ class Head{
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta charset="<?php bloginfo( 'charset' ); ?>" />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta name="description" content="<?= is_single() ? get_the_excerpt() : bloginfo('name'); echo " - "; bloginfo('description') ?>">
       <?php
    }
 
@@ -67,6 +77,7 @@ class Head{
       }
       return $tag;
    }
+
    // add script handles to the array below
    public function add_async_style($tag, $handle) {
       $scripts_to_async = array('new_web_marcello-stylesheet');
