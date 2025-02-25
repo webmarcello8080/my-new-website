@@ -11,6 +11,9 @@ foreach($classesDir as $directory){
   }
 }
 
+// import the functions
+include_once(get_template_directory() .'/classes/functions.php');
+
 new \NewWebMarcello\admin\ThemeSupport();
 $args = [
     "metatag" => true,
