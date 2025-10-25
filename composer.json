@@ -40,7 +40,6 @@
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/genesis-custom-blocks": "^1.1",
-    "wpackagist-plugin/caldera-forms": "^1.9",
     "wpackagist-plugin/xml-sitemaps": "^3.0",
     "wpackagist-plugin/site-reviews": "^5.21",
     "wpackagist-plugin/forget-spam-comment": "^1.1"
